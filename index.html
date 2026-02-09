@@ -1,957 +1,1776 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Seshasai Family — Rehoboth Beach Weekend · June 25–28, 2026</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<title>Seshasai Family — Rehoboth Beach Summer 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <style>
 :root {
-  --gold: #C4A265;
-  --gold-light: #D4BC8B;
-  --navy: #1A2A3A;
-  --navy-deep: #0F1A26;
-  --cream: #FAF7F2;
-  --cream-dark: #EDE8DF;
-  --sand: #D8CEBE;
-  --ocean: #5B8FA8;
-  --ocean-light: #8BBAD0;
-  --white: #FFFFFF;
-  --charcoal: #2C2C2C;
-  --soft-gray: #666;
+  --sand: #f5f0e8;
+  --ocean-deep: #1a3a4a;
+  --ocean-mid: #2c6e7a;
+  --ocean-light: #6ba3b0;
+  --gold: #c5a55a;
+  --gold-light: #d4be82;
+  --coral: #d4856a;
+  --white: #ffffff;
+  --cream: #faf7f2;
+  --charcoal: #2d2d2d;
+  --slate: #5a6a72;
 }
-* { margin:0; padding:0; box-sizing:border-box; }
-html { scroll-behavior:smooth; scroll-padding-top: 70px; }
-body { font-family:'Montserrat',sans-serif; color:var(--charcoal); background:var(--cream); overflow-x:hidden; }
 
-/* ===== STICKY NAV ===== */
-.sticky-nav {
-  position:fixed; top:0; left:0; right:0; z-index:1000;
-  background:rgba(15,26,38,0.97); backdrop-filter:blur(12px);
-  border-bottom:1px solid rgba(196,162,101,0.25);
-  transition: transform 0.3s ease;
-}
-.nav-inner {
-  max-width:1300px; margin:0 auto;
-  display:flex; align-items:center; justify-content:space-between;
-  padding:0 1.5rem; height:60px;
-}
-.nav-brand {
-  font-family:'Cormorant Garamond',serif; font-size:1.1rem; color:var(--gold);
-  white-space:nowrap; text-decoration:none; font-weight:500;
-}
-.nav-links {
-  display:flex; gap:0.15rem; align-items:center; overflow-x:auto;
-  scrollbar-width:none; -ms-overflow-style:none;
-}
-.nav-links::-webkit-scrollbar { display:none; }
-.nav-link {
-  color:rgba(255,255,255,0.65); font-size:0.6rem; letter-spacing:1.5px;
-  text-transform:uppercase; text-decoration:none; padding:0.5rem 0.65rem;
-  white-space:nowrap; border-radius:3px; transition:all 0.25s;
-  font-weight:500;
-}
-.nav-link:hover, .nav-link.active { color:var(--gold); background:rgba(196,162,101,0.1); }
-.nav-link.summary-link { color:var(--gold-light); font-weight:600; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
-/* ===== HERO ===== */
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--charcoal);
+  background: var(--cream);
+  font-weight: 300;
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+/* HERO */
 .hero {
-  position:relative; min-height:100vh; display:flex; align-items:center;
-  justify-content:center; text-align:center; overflow:hidden;
-  background: linear-gradient(135deg, var(--navy-deep) 0%, #1a3045 50%, #1a2a3a 100%);
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  background: linear-gradient(165deg, var(--ocean-deep) 0%, #1e4d5e 40%, var(--ocean-mid) 70%, var(--ocean-light) 100%);
 }
+
 .hero::before {
-  content:''; position:absolute; inset:0;
-  background: radial-gradient(ellipse at 30% 80%, rgba(91,143,168,0.15) 0%, transparent 60%),
-              radial-gradient(ellipse at 70% 20%, rgba(196,162,101,0.1) 0%, transparent 50%);
-}
-.hero-content { position:relative; z-index:2; padding:2rem; max-width:800px; }
-.hero-crest { width:80px; height:1px; background:var(--gold); margin:0 auto 2rem; }
-.hero-overline {
-  font-size:0.7rem; letter-spacing:6px; text-transform:uppercase;
-  color:var(--gold); margin-bottom:0.75rem;
-}
-.hero h1 {
-  font-family:'Cormorant Garamond',serif; font-weight:300;
-  font-size:clamp(2.5rem,6vw,4.5rem); color:var(--white); line-height:1.15;
-  margin-bottom:0.5rem;
-}
-.hero h1 em { font-style:italic; color:var(--gold-light); }
-.hero-sub {
-  font-family:'Cormorant Garamond',serif; font-size:1.3rem;
-  font-style:italic; color:rgba(255,255,255,0.7); margin:1rem 0 2rem;
-}
-.hero-dates {
-  display:inline-block; padding:0.7rem 2rem; border:1px solid var(--gold);
-  color:var(--gold-light); font-size:0.75rem; letter-spacing:3px;
-  text-transform:uppercase;
-}
-.hero-prepared {
-  margin-top:3rem; font-size:0.65rem; letter-spacing:3px;
-  text-transform:uppercase; color:rgba(255,255,255,0.35);
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1920&q=80') center/cover;
+  opacity: 0.18;
 }
 
-/* ===== SECTION STYLES ===== */
-.section-label {
-  font-size:0.65rem; letter-spacing:5px; text-transform:uppercase;
-  color:var(--gold); font-weight:600; margin-bottom:0.75rem;
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 200px;
+  background: linear-gradient(transparent, var(--cream));
 }
-.section-heading {
-  font-family:'Cormorant Garamond',serif; font-weight:400;
-  font-size:clamp(1.8rem,3.5vw,2.6rem); color:var(--navy); line-height:1.2;
-  margin-bottom:1rem;
-}
-.section-heading em { font-style:italic; color:var(--ocean); }
-.gold-divider { width:50px; height:1px; background:var(--gold); margin:1.5rem 0; }
 
-/* ===== SUMMARY SECTION ===== */
-#summary { padding:5rem 2rem 3rem; max-width:1200px; margin:0 auto; }
-.summary-intro {
-  max-width:750px; margin:0 auto 3rem; text-align:center;
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 2rem;
 }
-.summary-intro p {
-  font-size:0.9rem; line-height:1.85; color:var(--soft-gray); font-weight:300;
-}
-.summary-intro .gold-divider { margin:1.5rem auto; }
 
-/* ===== MAP SECTION ===== */
-.map-section {
-  background:var(--navy); padding:3rem 2rem; margin:0 -2rem 3rem;
-  margin-left:calc(-50vw + 50%); margin-right:calc(-50vw + 50%);
-  width:100vw;
+.hero-eyebrow {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 0.75rem;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  margin-bottom: 2rem;
 }
+
+.hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3rem, 7vw, 6rem);
+  font-weight: 300;
+  color: var(--white);
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+}
+
+.hero-subtitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--gold-light);
+  margin-bottom: 2rem;
+}
+
+.hero-details {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.7);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.hero-divider {
+  width: 60px;
+  height: 1px;
+  background: var(--gold);
+  margin: 1.5rem auto;
+}
+
+/* NAVIGATION */
+.nav-bar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(26,58,74,0.97);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(197,165,90,0.3);
+  padding: 0;
+  overflow-x: auto;
+}
+
+.nav-bar::-webkit-scrollbar { display: none; }
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.nav-bar a {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+  padding: 1rem 0.9rem;
+  white-space: nowrap;
+  transition: color 0.3s;
+  font-weight: 400;
+}
+
+.nav-bar a:hover { color: var(--gold); }
+
+/* HAMBURGER MOBILE NAV */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.8rem 0.5rem;
+  margin-left: auto;
+  z-index: 200;
+}
+.hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--gold);
+  margin: 5px 0;
+  transition: all 0.3s;
+  border-radius: 2px;
+}
+.hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px,5px); }
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px,-5px); }
+.mobile-nav-label {
+  display: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.6rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+  padding: 0.8rem 0;
+}
+.mobile-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(26,58,74,0.98);
+  backdrop-filter: blur(12px);
+  z-index: 150;
+  padding: 5rem 2rem 2rem;
+  overflow-y: auto;
+}
+.mobile-overlay.active { display: block; }
+.mobile-overlay-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
+  color: var(--gold);
+  text-align: center;
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
+}
+.mobile-nav-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  max-width: 400px;
+  margin: 0 auto;
+}
+.mobile-nav-grid a {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  padding: 1rem;
+  text-align: center;
+  border: 1px solid rgba(197,165,90,0.2);
+  border-radius: 4px;
+  transition: all 0.3s;
+}
+.mobile-nav-grid a:hover, .mobile-nav-grid a:active {
+  background: rgba(197,165,90,0.15);
+  color: var(--gold);
+  border-color: var(--gold);
+}
+
+@media (max-width: 900px) {
+  .nav-inner { display: none; }
+  .hamburger, .mobile-nav-label { display: block; }
+  .nav-bar {
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    justify-content: space-between;
+  }
+}
+
+/* GUEST TEASER */
+.guest-teaser {
+  font-size: 0.78rem;
+  color: var(--slate);
+  font-style: italic;
+  line-height: 1.5;
+  margin-top: 0.4rem;
+}
+
+/* SECTIONS */
+.section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.section-number {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.9rem;
+  color: var(--gold);
+  letter-spacing: 4px;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 400;
+  color: var(--ocean-deep);
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--slate);
+  font-weight: 300;
+}
+
+.section-line {
+  width: 50px;
+  height: 1px;
+  background: var(--gold);
+  margin: 1rem auto 0;
+}
+
+/* CARDS */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: var(--white);
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+}
+
+.card-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.card-tag {
+  font-size: 0.6rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.card-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.35rem;
+  font-weight: 500;
+  color: var(--ocean-deep);
+  margin-bottom: 0.5rem;
+}
+
+.card-desc {
+  font-size: 0.85rem;
+  color: var(--slate);
+  line-height: 1.7;
+}
+
+.card-meta {
+  margin-top: 1rem;
+  font-size: 0.75rem;
+  color: var(--ocean-mid);
+  font-weight: 400;
+}
+
+/* FULL WIDTH BANNER */
+.banner {
+  position: relative;
+  padding: 6rem 2rem;
+  text-align: center;
+  background: var(--ocean-deep);
+  color: var(--white);
+  overflow: hidden;
+}
+
+.banner::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: url('https://images.unsplash.com/photo-1519046904884-53103b34b206?w=1920&q=80') center/cover;
+  opacity: 0.15;
+}
+
+.banner-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.banner-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.banner-text {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.8;
+}
+
+/* GUEST GRID */
+.guest-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.guest-card {
+  background: var(--white);
+  padding: 1.5rem;
+  border-radius: 4px;
+  border-left: 3px solid var(--gold);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+}
+
+.guest-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--ocean-deep);
+  margin-bottom: 0.3rem;
+}
+
+.guest-role {
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.guest-interests {
+  font-size: 0.82rem;
+  color: var(--slate);
+}
+
+/* LIST SECTION */
+.venue-list {
+  list-style: none;
+}
+
+.venue-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.venue-item:last-child { border-bottom: none; }
+
+.venue-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  color: var(--gold);
+  min-width: 30px;
+  font-weight: 500;
+}
+
+.venue-info h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--ocean-deep);
+  margin-bottom: 0.2rem;
+}
+
+.venue-info p {
+  font-size: 0.85rem;
+  color: var(--slate);
+}
+
+.venue-info .venue-detail {
+  font-size: 0.75rem;
+  color: var(--ocean-mid);
+  margin-top: 0.3rem;
+  font-weight: 400;
+}
+
+/* MAP */
 .map-container {
-  max-width:1100px; margin:0 auto; display:grid;
-  grid-template-columns:1fr 1fr; gap:3rem; align-items:start;
-}
-.map-visual {
-  background:rgba(255,255,255,0.06); border-radius:8px; padding:2rem;
-  border:1px solid rgba(196,162,101,0.15);
-}
-.map-svg { width:100%; height:auto; }
-.map-legend { padding-top:0.5rem; }
-.map-legend h3 {
-  font-family:'Cormorant Garamond',serif; font-size:1.4rem;
-  color:var(--white); margin-bottom:1.5rem;
-}
-.legend-item {
-  display:flex; align-items:flex-start; gap:0.75rem; margin-bottom:1rem;
-  padding-bottom:1rem; border-bottom:1px solid rgba(255,255,255,0.06);
-}
-.legend-num {
-  width:26px; height:26px; border-radius:50%; display:flex;
-  align-items:center; justify-content:center; font-size:0.6rem;
-  font-weight:700; flex-shrink:0;
-}
-.legend-num.on-beach { background:var(--gold); color:var(--navy-deep); }
-.legend-num.near-beach { background:var(--ocean); color:var(--white); }
-.legend-num.in-town { background:rgba(255,255,255,0.2); color:var(--white); }
-.legend-info h4 { font-size:0.75rem; color:var(--white); font-weight:500; letter-spacing:1px; }
-.legend-info p { font-size:0.65rem; color:rgba(255,255,255,0.5); margin-top:2px; }
-.legend-key {
-  display:flex; gap:1.5rem; margin-top:1.5rem; padding-top:1rem;
-  border-top:1px solid rgba(255,255,255,0.1);
-}
-.key-item { display:flex; align-items:center; gap:0.4rem; }
-.key-dot { width:10px; height:10px; border-radius:50%; }
-.key-dot.gold { background:var(--gold); }
-.key-dot.blue { background:var(--ocean); }
-.key-dot.gray { background:rgba(255,255,255,0.3); }
-.key-label { font-size:0.6rem; color:rgba(255,255,255,0.5); text-transform:uppercase; letter-spacing:1px; }
-
-/* ===== COMPARISON TABLE ===== */
-.table-wrapper {
-  overflow-x:auto; margin:0 -2rem; padding:0 2rem;
-  margin-left:calc(-50vw + 50%); margin-right:calc(-50vw + 50%);
-  width:100vw;
-}
-.comparison-table {
-  width:100%; max-width:1300px; margin:0 auto;
-  border-collapse:collapse; font-size:0.75rem;
-}
-.comparison-table thead th {
-  background:var(--navy); color:var(--gold-light); padding:1rem 0.8rem;
-  text-align:left; font-weight:600; letter-spacing:1px;
-  text-transform:uppercase; font-size:0.6rem; position:sticky; top:60px; z-index:99;
-  border-bottom:2px solid var(--gold);
-}
-.comparison-table thead th:first-child { border-radius:4px 0 0 0; }
-.comparison-table thead th:last-child { border-radius:0 4px 0 0; }
-.comparison-table tbody td {
-  padding:0.85rem 0.8rem; border-bottom:1px solid var(--sand);
-  vertical-align:top; line-height:1.5;
-}
-.comparison-table tbody tr:hover { background:rgba(196,162,101,0.06); }
-.comparison-table .hotel-name-cell {
-  font-weight:600; color:var(--navy); white-space:nowrap;
-}
-.comparison-table .hotel-name-cell a {
-  color:var(--navy); text-decoration:none; border-bottom:1px solid var(--gold);
-  transition:color 0.2s;
-}
-.comparison-table .hotel-name-cell a:hover { color:var(--ocean); }
-.check { color:#4CAF50; font-weight:700; }
-.cross { color:#ccc; }
-.highlight-cell { background:rgba(196,162,101,0.08); }
-
-/* ===== HOTEL SECTIONS ===== */
-.hotel-section {
-  padding:4rem 0 0;
-  border-top:1px solid var(--sand);
-}
-.hotel-section:first-of-type { border-top:none; }
-.hotel-header {
-  max-width:1200px; margin:0 auto; padding:0 2rem;
-  display:grid; grid-template-columns:1fr 1fr; gap:3rem; align-items:center;
-  margin-bottom:2rem;
-}
-.hotel-header-text {}
-.hotel-header-text .hotel-number {
-  font-family:'Cormorant Garamond',serif; font-size:4rem; font-weight:300;
-  color:var(--gold); line-height:1; opacity:0.5; margin-bottom:0.25rem;
-}
-.hotel-header-text h2 {
-  font-family:'Cormorant Garamond',serif; font-size:clamp(1.8rem,3vw,2.4rem);
-  font-weight:400; color:var(--navy); line-height:1.2;
-}
-.hotel-header-text .hotel-address {
-  font-size:0.7rem; color:var(--soft-gray); letter-spacing:2px;
-  text-transform:uppercase; margin-top:0.5rem;
-}
-.hotel-header-text .hotel-desc {
-  font-size:0.88rem; line-height:1.8; color:var(--soft-gray); font-weight:300;
-  margin-top:1rem;
-}
-.hotel-header-image {
-  border-radius:4px; overflow:hidden; height:320px;
-}
-.hotel-header-image img {
-  width:100%; height:100%; object-fit:cover; display:block;
-  transition:transform 0.6s ease;
-}
-.hotel-header-image:hover img { transform:scale(1.03); }
-
-/* Hotel amenities pills */
-.hotel-pills {
-  display:flex; flex-wrap:wrap; gap:0.4rem; margin-top:1rem;
-}
-.pill {
-  display:inline-block; padding:0.3rem 0.7rem; border-radius:20px;
-  font-size:0.6rem; letter-spacing:1px; text-transform:uppercase;
-  font-weight:500;
-}
-.pill.gold { background:rgba(196,162,101,0.15); color:var(--gold); border:1px solid rgba(196,162,101,0.3); }
-.pill.blue { background:rgba(91,143,168,0.1); color:var(--ocean); border:1px solid rgba(91,143,168,0.2); }
-.pill.green { background:rgba(76,175,80,0.08); color:#4a8a4e; border:1px solid rgba(76,175,80,0.2); }
-
-/* Room photo grids */
-.room-grid {
-  max-width:1200px; margin:0 auto; padding:0 2rem 3rem;
-  display:grid; gap:4px;
-}
-.room-grid.three { grid-template-columns:1fr 1fr 1fr; }
-.room-grid.two-one { grid-template-columns:2fr 1fr; }
-.room-grid.one-two { grid-template-columns:1fr 2fr; }
-.room-photo {
-  position:relative; overflow:hidden; height:280px; border-radius:3px;
-}
-.room-photo img {
-  width:100%; height:100%; object-fit:cover; display:block;
-  transition:transform 0.6s ease;
-}
-.room-photo:hover img { transform:scale(1.04); }
-.room-photo .photo-label {
-  position:absolute; bottom:0.8rem; left:0.8rem;
-  background:rgba(15,26,38,0.75); backdrop-filter:blur(4px);
-  color:var(--white); padding:0.35rem 0.7rem; font-size:0.55rem;
-  letter-spacing:2px; text-transform:uppercase; border-radius:2px;
+  width: 100%;
+  height: 500px;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  margin: 2rem 0;
 }
 
-.hotel-cta {
-  text-align:center; padding:1.5rem 2rem 3rem;
-}
-.hotel-cta a {
-  display:inline-block; padding:0.7rem 2rem; border:1px solid var(--gold);
-  color:var(--gold); font-size:0.65rem; letter-spacing:3px;
-  text-transform:uppercase; text-decoration:none; transition:all 0.3s;
-  font-weight:600;
-}
-.hotel-cta a:hover {
-  background:var(--gold); color:var(--navy-deep);
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 
-/* ===== FOOTER ===== */
-footer {
-  background:var(--navy-deep); padding:3rem 2rem; text-align:center;
-  border-top:2px solid var(--gold);
-}
-.footer-text {
-  font-family:'Cormorant Garamond',serif; font-size:1.3rem;
-  color:var(--gold); margin-bottom:0.5rem;
-}
-.footer-sub {
-  font-size:0.65rem; color:rgba(255,255,255,0.35); letter-spacing:2px;
+/* TWO COLUMN */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
 }
 
-/* ===== RESPONSIVE ===== */
-@media (max-width:900px) {
-  .hotel-header { grid-template-columns:1fr; }
-  .hotel-header-image { height:250px; }
-  .map-container { grid-template-columns:1fr; }
-  .room-grid.three, .room-grid.two-one, .room-grid.one-two { grid-template-columns:1fr; }
-  .room-photo { height:220px; }
-  .nav-link { font-size:0.55rem; padding:0.4rem 0.5rem; }
-  .comparison-table { font-size:0.65rem; }
+@media (max-width: 768px) {
+  .two-col { grid-template-columns: 1fr; }
+  .card-grid { grid-template-columns: 1fr; }
 }
+
+/* PHOTO GALLERY ROW */
+.photo-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+  margin: 2rem 0;
+}
+
+.photo-row img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 3px;
+}
+
+@media (max-width: 768px) {
+  .photo-row { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* FOOTER */
+.footer {
+  background: var(--ocean-deep);
+  color: rgba(255,255,255,0.6);
+  padding: 3rem 2rem;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.footer-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  color: var(--gold-light);
+  margin-bottom: 0.5rem;
+}
+
+/* HIGHLIGHT BOX */
+.highlight-box {
+  background: linear-gradient(135deg, var(--ocean-deep), #1e4d5e);
+  color: var(--white);
+  padding: 2.5rem;
+  border-radius: 4px;
+  margin: 2rem 0;
+}
+
+.highlight-box h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  color: var(--gold-light);
+  margin-bottom: 0.8rem;
+}
+
+.highlight-box p {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.8);
+  line-height: 1.8;
+}
+
+/* DIVIDER SECTION */
+.divider-full {
+  padding: 3rem 2rem;
+  background: var(--sand);
+  text-align: center;
+}
+
+.divider-full .quote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-style: italic;
+  color: var(--ocean-deep);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* SUB SECTIONS */
+.sub-section {
+  margin-bottom: 3rem;
+}
+
+.sub-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  color: var(--ocean-deep);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--gold);
+  display: inline-block;
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--cream); }
+::-webkit-scrollbar-thumb { background: var(--ocean-light); border-radius: 4px; }
 </style>
 </head>
 <body>
 
-<!-- ===== STICKY NAV ===== -->
-<nav class="sticky-nav" id="stickyNav">
+<!-- ========== HERO ========== -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-eyebrow">Private Concierge Dossier</div>
+    <h1 class="hero-title">Rehoboth Beach</h1>
+    <div class="hero-subtitle">The Seshasai Family — Summer 2026</div>
+    <div class="hero-divider"></div>
+    <p class="hero-details">June 25 – 28 &nbsp;·&nbsp; The Bellmoor Inn & Spa</p>
+  </div>
+</section>
+
+<!-- ========== NAV ========== -->
+<nav class="nav-bar">
+  <span class="mobile-nav-label">Navigate</span>
+  <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
   <div class="nav-inner">
-    <a href="#top" class="nav-brand">Seshasai Family · Rehoboth 2026</a>
-    <div class="nav-links">
-      <a href="#summary" class="nav-link summary-link">Summary</a>
-      <a href="#bellmoor" class="nav-link">Bellmoor</a>
-      <a href="#hotelrehoboth" class="nav-link">Hotel Rehoboth</a>
-      <a href="#avenueinn" class="nav-link">Avenue Inn</a>
-      <a href="#boardwalkplaza" class="nav-link">Boardwalk Plaza</a>
-      <a href="#atlanticsands" class="nav-link">Atlantic Sands</a>
-      <a href="#coast" class="nav-link">Coast</a>
-      <a href="#breakers" class="nav-link">Breakers</a>
-      <a href="#admiral" class="nav-link">Admiral</a>
-    </div>
+    <a href="#guests">The Party</a>
+    <a href="#hotel">Your Hotel</a>
+    <a href="#beach">Beach</a>
+    <a href="#water">Water Sports</a>
+    <a href="#cruises">Cruises</a>
+    <a href="#walks">Walks & Biking</a>
+    <a href="#pickleball">Pickleball</a>
+    <a href="#shows">Shows</a>
+    <a href="#sports">Sports</a>
+    <a href="#shopping">Shopping</a>
+    <a href="#coffee">Coffee</a>
+    <a href="#lunch">Lunch</a>
+    <a href="#dinner">Dinner</a>
+    <a href="#sights">Sights</a>
+    <a href="#portraits">Portraits</a>
+    <a href="#biden">Biden</a>
+    <a href="#map">Map</a>
   </div>
 </nav>
 
-<!-- ===== HERO ===== -->
-<section class="hero" id="top">
-  <div class="hero-content">
-    <div class="hero-crest"></div>
-    <p class="hero-overline">A Curated Accommodation Guide</p>
-    <h1>Rehoboth Beach<br><em>Weekend</em></h1>
-    <p class="hero-sub">The Seshasai Family · The Nation's Summer Capital</p>
-    <div class="hero-dates">Thursday, June 25 — Sunday, June 28, 2026</div>
-    <p class="hero-prepared">Prepared with care · 8 Hotels Compared</p>
+<div class="mobile-overlay" id="mobileNav">
+  <div class="mobile-overlay-title">Navigate the Guide</div>
+  <div class="mobile-nav-grid">
+    <a href="#guests" onclick="closeMobileNav()">The Party</a>
+    <a href="#hotel" onclick="closeMobileNav()">Your Hotel</a>
+    <a href="#beach" onclick="closeMobileNav()">Beach</a>
+    <a href="#water" onclick="closeMobileNav()">Water Sports</a>
+    <a href="#cruises" onclick="closeMobileNav()">Cruises</a>
+    <a href="#walks" onclick="closeMobileNav()">Walks & Biking</a>
+    <a href="#pickleball" onclick="closeMobileNav()">Pickleball</a>
+    <a href="#shows" onclick="closeMobileNav()">Shows</a>
+    <a href="#sports" onclick="closeMobileNav()">Sports</a>
+    <a href="#shopping" onclick="closeMobileNav()">Shopping</a>
+    <a href="#coffee" onclick="closeMobileNav()">Coffee</a>
+    <a href="#lunch" onclick="closeMobileNav()">Lunch</a>
+    <a href="#dinner" onclick="closeMobileNav()">Dinner</a>
+    <a href="#sights" onclick="closeMobileNav()">Sights</a>
+    <a href="#portraits" onclick="closeMobileNav()">Portraits</a>
+    <a href="#biden" onclick="closeMobileNav()">Biden</a>
+    <a href="#map" onclick="closeMobileNav()">Map</a>
+  </div>
+</div>
+
+<script>
+function toggleMobileNav() {
+  document.getElementById('mobileNav').classList.toggle('active');
+  document.querySelector('.hamburger').classList.toggle('active');
+  document.body.style.overflow = document.getElementById('mobileNav').classList.contains('active') ? 'hidden' : '';
+}
+function closeMobileNav() {
+  document.getElementById('mobileNav').classList.remove('active');
+  document.querySelector('.hamburger').classList.remove('active');
+  document.body.style.overflow = '';
+}
+</script>
+
+<!-- ========== THE PARTY ========== -->
+<section class="section" id="guests">
+  <div class="section-header">
+    <span class="section-number">I</span>
+    <h2 class="section-title">The Seshasai Party</h2>
+    <p class="section-subtitle">Ten guests, three generations, one unforgettable weekend</p>
+    <div class="section-line"></div>
+  </div>
+  <div class="guest-grid">
+    <div class="guest-card">
+      <div class="guest-name">Tata</div>
+      <div class="guest-teaser">Evening boardwalk strolls, morning breakfast buffets, and a front-row seat to the grandkids making memories</div>
+    </div>
+    <div class="guest-card">
+      <div class="guest-name">Paati</div>
+      <div class="guest-teaser">Sunrise walks along the shore, spa treatments at The Bellmoor, and the adults-only pool with a good book</div>
+    </div>
+    <div class="guest-card">
+      <div class="guest-name">Satwik</div>
+      <div class="guest-teaser">Jet skis on Rehoboth Bay, parasailing over the Atlantic, and catching the Phillies at a beachside sports bar</div>
+    </div>
+    <div class="guest-card">
+      <div class="guest-name">Rebecca</div>
+      <div class="guest-teaser">Tax-free boutique shopping on Rehoboth Ave, mornings at The Coffee Mill, and a French dinner at La Fable</div>
+    </div>
+    <div class="guest-card">
+      <div class="guest-name">Talia</div>
+      <div class="guest-teaser">Instagram-worthy parasailing shots, Penny Lane boutiques, and a white-tablecloth dinner she'll never forget</div>
+    </div>
+    <div class="guest-card">
+      <div class="guest-name">Ari</div>
+      <div class="guest-teaser">Pickleball courts, Funland on the boardwalk, mini golf with ocean views, and banana boat rides</div>
+    </div>
+    <div class="guest-card">
+      <div class="guest-name">Shreyes</div>
+      <div class="guest-teaser">Stroller-friendly beach walks, Gordon's Pond Trail with Rohan, and pickleball when the crew takes the baby</div>
+    </div>
+    <div class="guest-card">
+      <div class="guest-name">Kat</div>
+      <div class="guest-teaser">Pickleball throwdowns, Tanger Outlets tax-free haul, and an oyster tower at Henlopen City Oyster House</div>
+    </div>
+    <div class="guest-card">
+      <div class="guest-name">Karuna</div>
+      <div class="guest-teaser">Adults-only pool, a relaxing spa treatment, fine dining at Salt Air, and sunset cocktails at The Bellmoor</div>
+    </div>
+    <div class="guest-card">
+      <div class="guest-name">Rohan</div>
+      <div class="guest-teaser">His first beach trip! Gentle bay-side wading in Dewey, shaded stroller walks, and being spoiled by the whole family</div>
+    </div>
   </div>
 </section>
 
-<!-- ===== SUMMARY ===== -->
-<section id="summary">
-  <div class="summary-intro">
-    <p class="section-label">Overview</p>
-    <h2 class="section-heading">Your Rehoboth Beach<br><em>Hotel Options at a Glance</em></h2>
-    <div class="gold-divider"></div>
-    <p>We've curated eight of Rehoboth Beach's finest hotels for your June weekend getaway — ranging from oceanfront Victorian elegance to boutique chic. Below you'll find a location map, a side-by-side amenity comparison, and detailed photo galleries for each property. Delaware is tax-free on lodging, and most hotels offer free parking — two great reasons to love the shore.</p>
+<!-- ========== STREET VIEWS ========== -->
+<div class="photo-row" style="max-width:1200px; margin:0 auto; padding:0 2rem;">
+  <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80" alt="Beach at sunrise">
+  <img src="https://images.unsplash.com/photo-1471922694854-ff1b63b20054?w=600&q=80" alt="Coastal town">
+  <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80" alt="Ocean waves">
+  <img src="https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?w=600&q=80" alt="Boardwalk sunset">
+</div>
+
+<!-- ========== YOUR HOTEL ========== -->
+<section class="section" id="hotel">
+  <div class="section-header">
+    <span class="section-number">II</span>
+    <h2 class="section-title">The Bellmoor Inn & Spa</h2>
+    <p class="section-subtitle">6 Christian Street, Rehoboth Beach — Your home for the weekend</p>
+    <div class="section-line"></div>
   </div>
 
-  <!-- ===== MAP ===== -->
-  <div class="map-section">
-    <div class="map-container">
-      <div class="map-visual">
-        <svg class="map-svg" viewBox="0 0 600 520" xmlns="http://www.w3.org/2000/svg">
-          <!-- Ocean -->
-          <defs>
-            <linearGradient id="ocean" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" style="stop-color:#2a6a8a;stop-opacity:0.4"/>
-              <stop offset="100%" style="stop-color:#1a4a6a;stop-opacity:0.2"/>
-            </linearGradient>
-          </defs>
-          <rect x="0" y="0" width="600" height="110" fill="url(#ocean)" rx="4"/>
-          <text x="300" y="55" text-anchor="middle" fill="rgba(255,255,255,0.25)" font-family="Cormorant Garamond" font-size="22" font-style="italic">Atlantic Ocean</text>
+  <div class="two-col">
+    <div>
+      <p style="margin-bottom:1.5rem;">Beautifully reimagined for modern travelers, The Bellmoor Inn & Spa strikes a rare balance between modern seaside inn and elegant historic hotel. Set just two blocks from Rehoboth Beach's iconic boardwalk, it has been named <strong>Best Designed Hotel in Delaware</strong> by House Beautiful. With 78 guest rooms including 22 suites, the property features marble-tiled bathrooms, plush bedding, and private balconies throughout.</p>
 
-          <!-- Beach/Boardwalk -->
-          <rect x="0" y="110" width="600" height="35" fill="rgba(216,206,190,0.15)" rx="0"/>
-          <text x="300" y="132" text-anchor="middle" fill="rgba(255,255,255,0.35)" font-family="Montserrat" font-size="9" letter-spacing="4" text-transform="uppercase">═══ BOARDWALK & BEACH ═══</text>
-
-          <!-- Streets -->
-          <line x1="0" y1="185" x2="600" y2="185" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
-          <text x="590" y="182" text-anchor="end" fill="rgba(255,255,255,0.2)" font-family="Montserrat" font-size="7" letter-spacing="1">REHOBOTH AVE</text>
-
-          <line x1="0" y1="250" x2="600" y2="250" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
-
-          <line x1="0" y1="310" x2="600" y2="310" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
-
-          <!-- Baltimore Ave (vertical) -->
-          <line x1="380" y1="110" x2="380" y2="520" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
-          <text x="385" y="420" fill="rgba(255,255,255,0.15)" font-family="Montserrat" font-size="7" letter-spacing="1" transform="rotate(90,385,420)">BALTIMORE AVE</text>
-
-          <!-- Wilmington Ave -->
-          <line x1="200" y1="110" x2="200" y2="520" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
-
-          <!-- ON THE BEACH HOTELS -->
-          <!-- Boardwalk Plaza - ON boardwalk -->
-          <circle cx="250" cy="148" r="14" fill="#C4A265" opacity="0.9"/>
-          <text x="250" y="152" text-anchor="middle" fill="#0F1A26" font-family="Montserrat" font-size="9" font-weight="700">4</text>
-
-          <!-- Atlantic Sands - ON boardwalk -->
-          <circle cx="340" cy="148" r="14" fill="#C4A265" opacity="0.9"/>
-          <text x="340" y="152" text-anchor="middle" fill="#0F1A26" font-family="Montserrat" font-size="9" font-weight="700">5</text>
-
-          <!-- Admiral on Baltimore - steps from boardwalk -->
-          <circle cx="410" cy="158" r="14" fill="#C4A265" opacity="0.9"/>
-          <text x="410" y="162" text-anchor="middle" fill="#0F1A26" font-family="Montserrat" font-size="9" font-weight="700">8</text>
-
-          <!-- NEAR BEACH HOTELS (1-2 blocks) -->
-          <!-- Avenue Inn - 1 block -->
-          <circle cx="195" cy="210" r="14" fill="#5B8FA8" opacity="0.9"/>
-          <text x="195" y="214" text-anchor="middle" fill="#fff" font-family="Montserrat" font-size="9" font-weight="700">3</text>
-
-          <!-- Bellmoor - 2 blocks -->
-          <circle cx="120" cy="275" r="14" fill="#5B8FA8" opacity="0.9"/>
-          <text x="120" y="279" text-anchor="middle" fill="#fff" font-family="Montserrat" font-size="9" font-weight="700">1</text>
-
-          <!-- IN-TOWN HOTELS -->
-          <!-- Hotel Rehoboth - on Rehoboth Ave -->
-          <circle cx="470" cy="210" r="14" fill="rgba(255,255,255,0.3)" opacity="0.9"/>
-          <text x="470" y="214" text-anchor="middle" fill="#fff" font-family="Montserrat" font-size="9" font-weight="700">2</text>
-
-          <!-- Coast Rehoboth - near convention center -->
-          <circle cx="500" cy="290" r="14" fill="rgba(255,255,255,0.3)" opacity="0.9"/>
-          <text x="500" y="294" text-anchor="middle" fill="#fff" font-family="Montserrat" font-size="9" font-weight="700">6</text>
-
-          <!-- Breakers - Lake Gerar -->
-          <circle cx="440" cy="350" r="14" fill="rgba(255,255,255,0.3)" opacity="0.9"/>
-          <text x="440" y="354" text-anchor="middle" fill="#fff" font-family="Montserrat" font-size="9" font-weight="700">7</text>
-
-          <!-- Lake Gerar -->
-          <ellipse cx="420" cy="400" rx="60" ry="30" fill="rgba(91,143,168,0.15)" stroke="rgba(91,143,168,0.2)" stroke-width="1"/>
-          <text x="420" y="405" text-anchor="middle" fill="rgba(255,255,255,0.2)" font-family="Cormorant Garamond" font-size="11" font-style="italic">Silver Lake</text>
-
-          <!-- Labels -->
-          <text x="250" y="128" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-family="Montserrat" font-size="6" letter-spacing="1">BOARDWALK PLAZA</text>
-          <text x="340" y="128" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-family="Montserrat" font-size="6" letter-spacing="1">ATLANTIC SANDS</text>
-          <text x="410" y="178" text-anchor="end" fill="rgba(255,255,255,0.5)" font-family="Montserrat" font-size="6" letter-spacing="1">ADMIRAL</text>
-          <text x="195" y="233" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-family="Montserrat" font-size="6" letter-spacing="1">AVENUE INN</text>
-          <text x="120" y="298" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-family="Montserrat" font-size="6" letter-spacing="1">BELLMOOR</text>
-          <text x="470" y="233" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-family="Montserrat" font-size="6" letter-spacing="1">HOTEL REHOBOTH</text>
-          <text x="500" y="313" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-family="Montserrat" font-size="6" letter-spacing="1">COAST</text>
-          <text x="440" y="373" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-family="Montserrat" font-size="6" letter-spacing="1">BREAKERS</text>
-        </svg>
+      <h3 class="sub-title">Hotel Amenities</h3>
+      <ul class="venue-list">
+        <li class="venue-item">
+          <span class="venue-num">✦</span>
+          <div class="venue-info">
+            <h4>Complimentary Breakfast Buffet</h4>
+            <p>Freshly baked pastries, hot items, coffee & juices served daily 7:30–10:30 AM</p>
+          </div>
+        </li>
+        <li class="venue-item">
+          <span class="venue-num">✦</span>
+          <div class="venue-info">
+            <h4>Two Outdoor Swimming Pools</h4>
+            <p>Family pool and adults-only pool with lounge areas and umbrellas. Plus a hot tub.</p>
+          </div>
+        </li>
+        <li class="venue-item">
+          <span class="venue-num">✦</span>
+          <div class="venue-info">
+            <h4>The Lobby Bar</h4>
+            <p>Craft cocktails, lunch, and small bites. Evening cocktail hours with food offerings for Club Level guests.</p>
+          </div>
+        </li>
+        <li class="venue-item">
+          <span class="venue-num">✦</span>
+          <div class="venue-info">
+            <h4>Beach Shuttle Service</h4>
+            <p>Complimentary shuttle to and from the beach — no parking hassle required</p>
+          </div>
+        </li>
+        <li class="venue-item">
+          <span class="venue-num">✦</span>
+          <div class="venue-info">
+            <h4>Gardens, Library & Fireside Lounge</h4>
+            <p>Beautiful courtyard garden, cozy reading room with puzzles, chess, and games. Fireplaces throughout.</p>
+          </div>
+        </li>
+        <li class="venue-item">
+          <span class="venue-num">✦</span>
+          <div class="venue-info">
+            <h4>Concierge Services</h4>
+            <p>24-hour front desk, free parking, free Wi-Fi, laundry service</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <div class="highlight-box">
+        <h3>The Spa at The Bellmoor</h3>
+        <p>A full-service spa offering massages (sports, hot stone, deep tissue), facials, body treatments (aromatherapy, body scrubs), Reiki, and a full beauty salon with hair and nail services. Treatment rooms are available — perfect for Satwik & Rebecca, Shreyes & Kat, or Karuna's relaxation day.</p>
+        <p style="margin-top:1rem;"><strong style="color:var(--gold-light);">Recommended:</strong> Book spa treatments upon arrival for June 26 or 27. Summer appointments fill quickly.</p>
       </div>
-      <div class="map-legend">
-        <h3>Hotels by Proximity to Beach</h3>
-        <div class="legend-item">
-          <span class="legend-num on-beach">4</span>
-          <div class="legend-info"><h4>Boardwalk Plaza Hotel</h4><p>Directly ON the boardwalk · Oceanfront</p></div>
-        </div>
-        <div class="legend-item">
-          <span class="legend-num on-beach">5</span>
-          <div class="legend-info"><h4>Atlantic Sands Hotel</h4><p>Directly ON the boardwalk · Oceanfront</p></div>
-        </div>
-        <div class="legend-item">
-          <span class="legend-num on-beach">8</span>
-          <div class="legend-info"><h4>Admiral on Baltimore</h4><p>60 feet from beach · Steps to boardwalk</p></div>
-        </div>
-        <div class="legend-item">
-          <span class="legend-num near-beach">3</span>
-          <div class="legend-info"><h4>The Avenue Inn & Spa</h4><p>1 block from beach & boardwalk</p></div>
-        </div>
-        <div class="legend-item">
-          <span class="legend-num near-beach">1</span>
-          <div class="legend-info"><h4>The Bellmoor Inn & Spa</h4><p>2 blocks from boardwalk</p></div>
-        </div>
-        <div class="legend-item">
-          <span class="legend-num in-town">2</span>
-          <div class="legend-info"><h4>Hotel Rehoboth</h4><p>On Rehoboth Ave · ~5 min walk to beach</p></div>
-        </div>
-        <div class="legend-item">
-          <span class="legend-num in-town">6</span>
-          <div class="legend-info"><h4>Coast Rehoboth Beach</h4><p>Near convention center · ~8 min walk</p></div>
-        </div>
-        <div class="legend-item">
-          <span class="legend-num in-town">7</span>
-          <div class="legend-info"><h4>The Breakers Hotel</h4><p>Near Silver Lake · ~10 min walk</p></div>
-        </div>
-        <div class="legend-key">
-          <div class="key-item"><div class="key-dot gold"></div><span class="key-label">On/At Beach</span></div>
-          <div class="key-item"><div class="key-dot blue"></div><span class="key-label">1–2 Blocks</span></div>
-          <div class="key-item"><div class="key-dot gray"></div><span class="key-label">In Town</span></div>
-        </div>
+      <div class="highlight-box" style="margin-top:1.5rem; background: linear-gradient(135deg, #3a2a1a, #5a3a2a);">
+        <h3>Henlopen City Oyster House</h3>
+        <p>Adjacent to The Bellmoor, this acclaimed restaurant serves fresh-shucked oysters, coastal-inspired dishes, and craft cocktails. One of Rehoboth's most celebrated dining experiences — a must for the family. No reservations accepted; arrive early.</p>
       </div>
     </div>
-  </div>
-
-  <!-- ===== COMPARISON TABLE ===== -->
-  <div style="max-width:1200px;margin:0 auto;text-align:center;margin-bottom:2rem;">
-    <p class="section-label">Side-by-Side</p>
-    <h2 class="section-heading">Amenity <em>Comparison</em></h2>
-  </div>
-  <div class="table-wrapper">
-    <table class="comparison-table">
-      <thead>
-        <tr>
-          <th>Hotel</th>
-          <th>Location</th>
-          <th>Rooms</th>
-          <th>Breakfast</th>
-          <th>On-Site Restaurant</th>
-          <th>Pool</th>
-          <th>Spa</th>
-          <th>Parking</th>
-          <th>Standout Feature</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="hotel-name-cell"><a href="#bellmoor">The Bellmoor Inn & Spa</a></td>
-          <td>2 blocks</td>
-          <td>78</td>
-          <td class="highlight-cell"><span class="check">✓</span> Full buffet + omelets</td>
-          <td>Lobby Bar (cocktails, small bites)</td>
-          <td><span class="check">✓</span> 2 outdoor + hot tub</td>
-          <td><span class="check">✓</span> Full-service</td>
-          <td><span class="check">✓</span> Free</td>
-          <td>Award-winning spa, gardens, beach shuttle</td>
-        </tr>
-        <tr>
-          <td class="hotel-name-cell"><a href="#hotelrehoboth">Hotel Rehoboth</a></td>
-          <td>~5 min walk</td>
-          <td>52</td>
-          <td class="highlight-cell"><span class="check">✓</span> Hot made-to-order</td>
-          <td><span class="check">✓</span> Lupo Italian Kitchen</td>
-          <td><span class="check">✓</span> Outdoor</td>
-          <td><span class="cross">✗</span></td>
-          <td><span class="check">✓</span> Free</td>
-          <td>Nightly wine & cheese hour, beach shuttle + chairs</td>
-        </tr>
-        <tr>
-          <td class="hotel-name-cell"><a href="#avenueinn">The Avenue Inn & Spa</a></td>
-          <td>1 block</td>
-          <td>~33</td>
-          <td class="highlight-cell"><span class="check">✓</span> Continental</td>
-          <td><span class="check">✓</span> The Blue Hen (award-winning)</td>
-          <td><span class="check">✓</span> Heated saltwater</td>
-          <td><span class="check">✓</span> Full spa + sauna</td>
-          <td><span class="check">✓</span> Free</td>
-          <td>#1 on TripAdvisor, Blue Hen restaurant, steam room</td>
-        </tr>
-        <tr>
-          <td class="hotel-name-cell"><a href="#boardwalkplaza">Boardwalk Plaza</a></td>
-          <td><strong>ON boardwalk</strong></td>
-          <td>84</td>
-          <td class="highlight-cell"><span class="check">✓</span> Full at Victoria's</td>
-          <td><span class="check">✓</span> Victoria's (all meals) + Plaza Pub</td>
-          <td><span class="check">✓</span> Indoor-outdoor heated</td>
-          <td>Spa pool only</td>
-          <td><span class="check">✓</span> Free</td>
-          <td>Oceanfront Victorian, room service, afternoon tea, rooftop</td>
-        </tr>
-        <tr>
-          <td class="hotel-name-cell"><a href="#atlanticsands">Atlantic Sands</a></td>
-          <td><strong>ON boardwalk</strong></td>
-          <td>~115</td>
-          <td><span class="cross">✗</span> Not included</td>
-          <td><span class="check">✓</span> Kiwi's Kove + Tiki Hut</td>
-          <td><span class="check">✓</span> Outdoor</td>
-          <td><span class="cross">✗</span></td>
-          <td><span class="check">✓</span> Free</td>
-          <td>Oceanfront, largest conference hotel, family-oriented</td>
-        </tr>
-        <tr>
-          <td class="hotel-name-cell"><a href="#coast">Coast Rehoboth</a></td>
-          <td>~8 min walk</td>
-          <td>60</td>
-          <td><span class="cross">✗</span> Not included</td>
-          <td><span class="check">✓</span> Sirocco (lunch/dinner)</td>
-          <td><span class="check">✓</span> Rooftop indoor</td>
-          <td><span class="cross">✗</span></td>
-          <td><span class="check">✓</span> Free</td>
-          <td>Newest hotel, Hilton Honors, rooftop firepit patio</td>
-        </tr>
-        <tr>
-          <td class="hotel-name-cell"><a href="#breakers">The Breakers</a></td>
-          <td>~10 min walk</td>
-          <td>98</td>
-          <td class="highlight-cell"><span class="check">✓</span> Continental (at sister hotel)</td>
-          <td><span class="cross">✗</span> (Kiwi's Kove nearby)</td>
-          <td><span class="check">✓</span> Rooftop indoor heated</td>
-          <td><span class="cross">✗</span></td>
-          <td><span class="check">✓</span> Free</td>
-          <td>Dog-friendly, lake views, reading lounge</td>
-        </tr>
-        <tr>
-          <td class="hotel-name-cell"><a href="#admiral">Admiral on Baltimore</a></td>
-          <td>60 ft from beach</td>
-          <td>~40</td>
-          <td><span class="cross">✗</span> Not included</td>
-          <td><span class="cross">✗</span></td>
-          <td><span class="check">✓</span> Indoor glass-ceiling</td>
-          <td><span class="cross">✗</span></td>
-          <td><span class="check">✓</span> Free</td>
-          <td>Closest to beach, recently renovated, family-owned</td>
-        </tr>
-      </tbody>
-    </table>
   </div>
 </section>
 
-<!-- ════════════════════════════════════════════════════════ -->
-<!-- HOTEL 1: THE BELLMOOR INN & SPA -->
-<!-- ════════════════════════════════════════════════════════ -->
-<div class="hotel-section" id="bellmoor">
-  <div class="hotel-header">
-    <div class="hotel-header-text">
-      <div class="hotel-number">01</div>
-      <p class="section-label">Boutique Luxury · 2 Blocks from Boardwalk</p>
-      <h2>The Bellmoor Inn & Spa</h2>
-      <p class="hotel-address">6 Christian Street · Rehoboth Beach, DE 19971</p>
-      <p class="hotel-desc">The crown jewel of Rehoboth's boutique hotel scene. Recently awarded Best Designed Hotel in Delaware by House Beautiful, The Bellmoor balances coastal elegance with five-star service. With 78 rooms across several buildings, an award-winning full-service spa, two seasonal pools, gorgeous gardens, and a daily hot breakfast included, it's the most amenity-rich option on our list. The Club Level offers adults-only exclusivity with evening hors d'oeuvres and cocktails.</p>
-      <div class="hotel-pills">
-        <span class="pill gold">Full Breakfast Included</span>
-        <span class="pill gold">Full-Service Spa</span>
-        <span class="pill blue">2 Pools + Hot Tub</span>
-        <span class="pill blue">Beach Shuttle</span>
-        <span class="pill green">Free Parking</span>
-        <span class="pill green">NJ Resident 15% Off</span>
-      </div>
-    </div>
-    <div class="hotel-header-image">
-      <img src="https://symphony.cdn.tambourine.com/the-bellmoor-inn-spa/media/2-bellmoor-6470eddde2a32.jpg" alt="The Bellmoor living room">
-    </div>
+<!-- ========== BEACH ========== -->
+<div class="banner">
+  <div class="banner-content">
+    <div class="banner-title">The Shore Awaits</div>
+    <div class="banner-text">Rehoboth Beach spans just one square mile, but its mile-long boardwalk, wide sandy beaches, and charming downtown create a world of possibility. Delaware's tax-free shopping and the town's legendary culinary scene make this the Mid-Atlantic's premier beach destination.</div>
   </div>
-  <div class="room-grid three">
-    <div class="room-photo">
-      <img src="https://symphony.cdn.tambourine.com/the-bellmoor-inn-spa/media/4-bellmoor-6470ede3dd7cd.jpg" alt="Bellmoor guest room">
-      <span class="photo-label">Guest Room</span>
-    </div>
-    <div class="room-photo">
-      <img src="https://symphony.cdn.tambourine.com/the-bellmoor-inn-spa/media/7-bellmoor-6470edecc597b.jpg" alt="Bellmoor king suite">
-      <span class="photo-label">King Suite</span>
-    </div>
-    <div class="room-photo">
-      <img src="https://symphony.cdn.tambourine.com/the-bellmoor-inn-spa/media/13-bellmoor-6470ee142a47e.jpg" alt="Bellmoor king bedroom">
-      <span class="photo-label">King Bedroom</span>
-    </div>
-  </div>
-  <div class="room-grid three">
-    <div class="room-photo">
-      <img src="https://symphony.cdn.tambourine.com/the-bellmoor-inn-spa/media/8-bellmoor-6470edef8c690.jpg" alt="Bellmoor lobby bar">
-      <span class="photo-label">Lobby Bar</span>
-    </div>
-    <div class="room-photo">
-      <img src="https://symphony.cdn.tambourine.com/the-bellmoor-inn-spa/media/1-bellmoor-6470edda4bd07.jpg" alt="Bellmoor garden patio">
-      <span class="photo-label">Garden Patio</span>
-    </div>
-    <div class="room-photo">
-      <img src="https://symphony.cdn.tambourine.com/the-bellmoor-inn-spa/media/11-bellmoor-6470ee0e3d6eb.jpg" alt="Bellmoor robes">
-      <span class="photo-label">In-Room Comforts</span>
-    </div>
-  </div>
-  <div class="hotel-cta"><a href="https://www.thebellmoor.com/" target="_blank">Visit thebellmoor.com →</a></div>
 </div>
 
-<!-- ════════════════════════════════════════════════════════ -->
-<!-- HOTEL 2: HOTEL REHOBOTH -->
-<!-- ════════════════════════════════════════════════════════ -->
-<div class="hotel-section" id="hotelrehoboth">
-  <div class="hotel-header">
-    <div class="hotel-header-text">
-      <div class="hotel-number">02</div>
-      <p class="section-label">Boutique Luxury · On Rehoboth Avenue</p>
-      <h2>Hotel Rehoboth</h2>
-      <p class="hotel-address">247 Rehoboth Avenue · Rehoboth Beach, DE 19971</p>
-      <p class="hotel-desc">A polished boutique property on Rehoboth's main avenue with impeccable service. The 52 oversized rooms and suites are among the most spacious in town, with luxurious bedding and coastal décor. The standout perk: a nightly wine and cheese social hour, turn-down service with chocolates, and a made-to-order hot breakfast every morning at Lupo Italian Kitchen. The open-air beach shuttle includes complimentary chairs and towels — just show up and relax.</p>
-      <div class="hotel-pills">
-        <span class="pill gold">Hot Breakfast Included</span>
-        <span class="pill gold">Lupo Italian Kitchen</span>
-        <span class="pill blue">Nightly Wine & Cheese</span>
-        <span class="pill blue">Beach Shuttle + Chairs</span>
-        <span class="pill green">Free Parking</span>
-        <span class="pill green">Turn-Down Service</span>
+<section class="section" id="beach">
+  <div class="section-header">
+    <span class="section-number">III</span>
+    <h2 class="section-title">Beach & Sand</h2>
+    <p class="section-subtitle">The main event — sun, surf & sand for every generation</p>
+    <div class="section-line"></div>
+  </div>
+  <div class="card-grid">
+    <div class="card">
+      <img class="card-img" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80" alt="Beach">
+      <div class="card-body">
+        <div class="card-tag">Swimming & Sand Play</div>
+        <div class="card-name">Rehoboth Beach Public Beach</div>
+        <div class="card-desc">The main beach stretching along the boardwalk. Lifeguards on duty Memorial Day through Labor Day. Perfect for Ari's sandcastle building and family swim time. Just two blocks from The Bellmoor.</div>
+        <div class="card-meta">🏖️ 2-minute walk from hotel · Lifeguards on duty · Beach tag not required</div>
       </div>
     </div>
-    <div class="hotel-header-image">
-      <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/fe/da/47/hotel-rehoboth.jpg?w=1200&h=-1&s=1" alt="Hotel Rehoboth exterior">
-    </div>
-  </div>
-  <div class="room-grid three">
-    <div class="room-photo">
-      <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/509929009.jpg?k=e73e94feac3eafe1a55bc3f2b44cafc1e6e3e69b0e9aa1ca3b2e0a6ab7b2e4a9&o=" alt="Hotel Rehoboth king room">
-      <span class="photo-label">King Room</span>
-    </div>
-    <div class="room-photo">
-      <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/509929035.jpg?k=9e99b5e5a3be3d7eafcec3d5e5b75a4f0f6e5a8f7c5f0e7b4e8d5f3a7b9c1e5d&o=" alt="Hotel Rehoboth suite">
-      <span class="photo-label">Deluxe Suite</span>
-    </div>
-    <div class="room-photo">
-      <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/fe/da/8e/hotel-rehoboth.jpg?w=1200&h=-1&s=1" alt="Hotel Rehoboth pool">
-      <span class="photo-label">Pool & Sundeck</span>
-    </div>
-  </div>
-  <div class="hotel-cta"><a href="https://www.hotelrehoboth.com/" target="_blank">Visit hotelrehoboth.com →</a></div>
-</div>
-
-<!-- ════════════════════════════════════════════════════════ -->
-<!-- HOTEL 3: THE AVENUE INN & SPA -->
-<!-- ════════════════════════════════════════════════════════ -->
-<div class="hotel-section" id="avenueinn">
-  <div class="hotel-header">
-    <div class="hotel-header-text">
-      <div class="hotel-number">03</div>
-      <p class="section-label">#1 TripAdvisor · 1 Block from Beach</p>
-      <h2>The Avenue Inn & Spa</h2>
-      <p class="hotel-address">33 Wilmington Avenue · Rehoboth Beach, DE 19971</p>
-      <p class="hotel-desc">The #1-rated hotel in Rehoboth Beach on TripAdvisor — and for good reason. Just one block from the beach and boardwalk, The Avenue Inn pairs an exceptional full-service spa (with sauna, steam room, and outdoor hot tub) with The Blue Hen, an award-winning restaurant serving seasonal American cuisine. The heated saltwater pool, beach shuttle, and intimate boutique atmosphere make this a top-tier pick for a refined family getaway.</p>
-      <div class="hotel-pills">
-        <span class="pill gold">#1 TripAdvisor</span>
-        <span class="pill gold">The Blue Hen Restaurant</span>
-        <span class="pill gold">Full Spa + Sauna + Steam</span>
-        <span class="pill blue">Heated Saltwater Pool</span>
-        <span class="pill blue">Beach Shuttle</span>
-        <span class="pill green">Free Parking</span>
+    <div class="card">
+      <img class="card-img" src="https://images.unsplash.com/photo-1504681869696-d977211a5f4c?w=600&q=80" alt="Quiet beach">
+      <div class="card-body">
+        <div class="card-tag">Quieter Beach</div>
+        <div class="card-name">Gordon's Pond Beach (North Beach)</div>
+        <div class="card-desc">A wide, scenic stretch at the southern entrance to Cape Henlopen State Park. Less crowded than the main beach. Perfect for Tata, Paati, and Karuna who prefer a quieter setting. Chair & umbrella rentals available.</div>
+        <div class="card-meta">🚗 5-minute drive · Cape Henlopen State Park entrance fee applies</div>
       </div>
     </div>
-    <div class="hotel-header-image">
-      <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2a/f1/56/ee/the-avenue-inn-spa.jpg?w=1200&h=-1&s=1" alt="Avenue Inn exterior">
-    </div>
-  </div>
-  <div class="room-grid three">
-    <div class="room-photo">
-      <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/e2/a5/35/avenue-inn-spa.jpg?w=1200&h=-1&s=1" alt="Avenue Inn room">
-      <span class="photo-label">Guest Room</span>
-    </div>
-    <div class="room-photo">
-      <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/e2/a6/17/avenue-inn-spa.jpg?w=1200&h=-1&s=1" alt="Avenue Inn suite">
-      <span class="photo-label">Suite</span>
-    </div>
-    <div class="room-photo">
-      <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2a/f1/57/4d/the-avenue-inn-spa.jpg?w=1200&h=-1&s=1" alt="Avenue Inn pool">
-      <span class="photo-label">Saltwater Pool</span>
-    </div>
-  </div>
-  <div class="hotel-cta"><a href="https://avenueinn.com/" target="_blank">Visit avenueinn.com →</a></div>
-</div>
-
-<!-- ════════════════════════════════════════════════════════ -->
-<!-- HOTEL 4: BOARDWALK PLAZA HOTEL -->
-<!-- ════════════════════════════════════════════════════════ -->
-<div class="hotel-section" id="boardwalkplaza">
-  <div class="hotel-header">
-    <div class="hotel-header-text">
-      <div class="hotel-number">04</div>
-      <p class="section-label">Victorian Oceanfront · ON the Boardwalk</p>
-      <h2>Boardwalk Plaza Hotel</h2>
-      <p class="hotel-address">2 Olive Avenue & the Boardwalk · Rehoboth Beach, DE 19971</p>
-      <p class="hotel-desc">The grande dame of Rehoboth Beach. This 84-room Victorian oceanfront hotel sits directly on the boardwalk with sweeping ocean views from most rooms. Victoria's Restaurant serves breakfast, brunch, lunch, and dinner with Atlantic views. The Concierge Level unlocks an exclusive rooftop sundeck with two hot tubs. Don't miss the afternoon tea service and the charming resident parrots in the lobby. Room service, whirlpool suites, and 2-bedroom apartments are available.</p>
-      <div class="hotel-pills">
-        <span class="pill gold">Oceanfront on Boardwalk</span>
-        <span class="pill gold">Victoria's Restaurant (All Meals)</span>
-        <span class="pill gold">Afternoon Tea</span>
-        <span class="pill blue">Heated Indoor-Outdoor Pool</span>
-        <span class="pill blue">Rooftop + 2 Hot Tubs</span>
-        <span class="pill green">Room Service</span>
-        <span class="pill green">Free Parking</span>
+    <div class="card">
+      <img class="card-img" src="https://lh3.googleusercontent.com/place-photos/AL8-SNEu-X9kJ50x1dk1--2IQgiDlmyIDZLbvVSnznjk9zMrvcyTdyvsVNfORoS4dvE7Sb2XrCireksU803ks-Lk6mFqsbkiVReSMDpET3tAtcBtpPXCF7PCdygdcPLPD5WS2nNHz01Q_XfGrHXHg10=s800-w800-h600" alt="Dewey Beach">
+      <div class="card-body">
+        <div class="card-tag">Bay-Side Beach</div>
+        <div class="card-name">Dewey Beach</div>
+        <div class="card-desc">Just south of Rehoboth, Dewey Beach offers both ocean-side and calm bay-side beaches — ideal for Shreyes to take the baby on gentle wading walks. Hub for water sports and sunset views over the bay.</div>
+        <div class="card-meta">🚗 5-minute drive · Water sports hub nearby</div>
       </div>
     </div>
-    <div class="hotel-header-image">
-      <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2d/49/ba/99/boardwalk-plaza-hotel.jpg?w=1200&h=-1&s=1" alt="Boardwalk Plaza exterior">
-    </div>
-  </div>
-  <div class="room-grid three">
-    <div class="room-photo">
-      <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/30/53/97/boardwalk-plaza-hotel.jpg?w=1200&h=-1&s=1" alt="Boardwalk Plaza room">
-      <span class="photo-label">Oceanfront King</span>
-    </div>
-    <div class="room-photo">
-      <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/30/53/7b/boardwalk-plaza-hotel.jpg?w=1200&h=-1&s=1" alt="Boardwalk Plaza suite">
-      <span class="photo-label">Victorian Suite</span>
-    </div>
-    <div class="room-photo">
-      <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2d/49/ba/d1/boardwalk-plaza-hotel.jpg?w=1200&h=-1&s=1" alt="Boardwalk Plaza restaurant">
-      <span class="photo-label">Victoria's Restaurant</span>
-    </div>
-  </div>
-  <div class="hotel-cta"><a href="https://boardwalkplaza.com/" target="_blank">Visit boardwalkplaza.com →</a></div>
-</div>
-
-<!-- ════════════════════════════════════════════════════════ -->
-<!-- HOTEL 5: ATLANTIC SANDS -->
-<!-- ════════════════════════════════════════════════════════ -->
-<div class="hotel-section" id="atlanticsands">
-  <div class="hotel-header">
-    <div class="hotel-header-text">
-      <div class="hotel-number">05</div>
-      <p class="section-label">Oceanfront · ON the Boardwalk</p>
-      <h2>Atlantic Sands Hotel & Conference Center</h2>
-      <p class="hotel-address">1 Baltimore Avenue · Rehoboth Beach, DE 19971</p>
-      <p class="hotel-desc">A classic oceanfront family hotel right on the boardwalk with direct beach access. The Atlantic Sands has been a Rehoboth institution for decades, recently modernized with updated rooms and amenities. Kiwi's Kove restaurant serves beachfront dining, and the Tiki Hut offers poolside drinks with ocean views. The outdoor pool overlooks the Atlantic. Note: breakfast is not included, but Kiwi's Kove and dozens of nearby restaurants have you covered. Great value for an oceanfront position.</p>
-      <div class="hotel-pills">
-        <span class="pill gold">Oceanfront on Boardwalk</span>
-        <span class="pill gold">Kiwi's Kove Restaurant</span>
-        <span class="pill blue">Oceanfront Pool</span>
-        <span class="pill blue">Tiki Hut Bar</span>
-        <span class="pill green">Free Parking</span>
-        <span class="pill green">Family-Friendly</span>
+    <div class="card">
+      <img class="card-img" src="https://images.unsplash.com/photo-1520942702018-0862200e6873?w=600&q=80" alt="Cape Henlopen">
+      <div class="card-body">
+        <div class="card-tag">Nature Beach</div>
+        <div class="card-name">Cape Henlopen State Park Beach</div>
+        <div class="card-desc">Where the Delaware Bay meets the Atlantic Ocean. A 7,000-acre park with pristine beaches, WWII observation towers, and the Fort Miles Historical Area. Superb for exploring and photography.</div>
+        <div class="card-meta">🚗 10-minute drive · Park entrance fee · Historic fort tours available</div>
       </div>
     </div>
-    <div class="hotel-header-image">
-      <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/d3/c1/f3/atlantic-sands-hotel.jpg?w=1200&h=-1&s=1" alt="Atlantic Sands exterior">
-    </div>
   </div>
-  <div class="room-grid three">
-    <div class="room-photo">
-      <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/d3/c1/dd/atlantic-sands-hotel.jpg?w=1200&h=-1&s=1" alt="Atlantic Sands room">
-      <span class="photo-label">Oceanfront Room</span>
-    </div>
-    <div class="room-photo">
-      <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/23/e8/80/fd/atlantic-sands-hotel.jpg?w=1200&h=-1&s=1" alt="Atlantic Sands king suite">
-      <span class="photo-label">Ambassador Suite</span>
-    </div>
-    <div class="room-photo">
-      <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/d3/c2/02/atlantic-sands-hotel.jpg?w=1200&h=-1&s=1" alt="Atlantic Sands pool">
-      <span class="photo-label">Oceanfront Pool</span>
-    </div>
-  </div>
-  <div class="hotel-cta"><a href="https://atlanticsandshotel.com/" target="_blank">Visit atlanticsandshotel.com →</a></div>
-</div>
+</section>
 
-<!-- ════════════════════════════════════════════════════════ -->
-<!-- HOTEL 6: COAST REHOBOTH BEACH -->
-<!-- ════════════════════════════════════════════════════════ -->
-<div class="hotel-section" id="coast">
-  <div class="hotel-header">
-    <div class="hotel-header-text">
-      <div class="hotel-number">06</div>
-      <p class="section-label">Modern Boutique · Tapestry Collection by Hilton</p>
-      <h2>Coast Rehoboth Beach</h2>
-      <p class="hotel-address">2 Rehoboth Avenue · Rehoboth Beach, DE 19971</p>
-      <p class="hotel-desc">The newest upscale boutique hotel in Rehoboth, part of Hilton's Tapestry Collection. Coast offers 60 sleek, modern rooms with coastal styling, Keurig coffee makers with local Rise Up coffee, wet bars with mini fridge and microwave, and luxurious bathrobes. Sirocco restaurant serves lunch and dinner downstairs. The rooftop features an indoor saltwater pool and an outdoor patio with a firepit — perfect for evening drinks. Hilton Honors points accepted. Note: breakfast is available at Sirocco but not included in the rate.</p>
-      <div class="hotel-pills">
-        <span class="pill gold">Newest in Town</span>
-        <span class="pill gold">Sirocco Restaurant</span>
-        <span class="pill blue">Rooftop Pool + Firepit</span>
-        <span class="pill blue">Hilton Honors</span>
-        <span class="pill green">Free Parking</span>
-        <span class="pill green">24-Hr Fitness</span>
+<!-- ========== WATER SPORTS ========== -->
+<section class="section" id="water">
+  <div class="section-header">
+    <span class="section-number">IV</span>
+    <h2 class="section-title">Water Sports & Adventures</h2>
+    <p class="section-subtitle">For Satwik, Talia, and anyone chasing an adrenaline rush</p>
+    <div class="section-line"></div>
+  </div>
+  <div class="card-grid">
+    <div class="card">
+      <img class="card-img" src="https://images.unsplash.com/photo-1626447857058-2ba6a8882dca?w=600&q=80" alt="Jet ski">
+      <div class="card-body">
+        <div class="card-tag">Jet Ski</div>
+        <div class="card-name">Dewey Beach Watersports</div>
+        <div class="card-desc">Yamaha Ex Sport Waverunners on Rehoboth Bay. Over 2 square miles of riding area with a guide on the water. 1 driver + 1 passenger per ski.</div>
+        <div class="card-meta">💰 ~$99/hour, $79/half hour · deweybeachwatersports.com</div>
       </div>
     </div>
-    <div class="hotel-header-image">
-      <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/2f/af/e3/coast-rehoboth-beach.jpg?w=1200&h=-1&s=1" alt="Coast Rehoboth lobby">
-    </div>
-  </div>
-  <div class="room-grid three">
-    <div class="room-photo">
-      <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/2f/af/d1/coast-rehoboth-beach.jpg?w=1200&h=-1&s=1" alt="Coast room">
-      <span class="photo-label">King Room</span>
-    </div>
-    <div class="room-photo">
-      <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/5d/57/3d/coast-rehoboth-beach.jpg?w=1200&h=-1&s=1" alt="Coast queen room">
-      <span class="photo-label">Double Queen</span>
-    </div>
-    <div class="room-photo">
-      <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/2f/af/ad/coast-rehoboth-beach.jpg?w=1200&h=-1&s=1" alt="Coast rooftop">
-      <span class="photo-label">Rooftop Patio</span>
-    </div>
-  </div>
-  <div class="hotel-cta"><a href="https://www.hilton.com/en/hotels/sbyupup-coast-rehoboth-beach/" target="_blank">Visit on Hilton.com →</a></div>
-</div>
-
-<!-- ════════════════════════════════════════════════════════ -->
-<!-- HOTEL 7: THE BREAKERS -->
-<!-- ════════════════════════════════════════════════════════ -->
-<div class="hotel-section" id="breakers">
-  <div class="hotel-header">
-    <div class="hotel-header-text">
-      <div class="hotel-number">07</div>
-      <p class="section-label">Family & Pet-Friendly · Near Silver Lake</p>
-      <h2>The Breakers Hotel & Suites</h2>
-      <p class="hotel-address">105 2nd Street · Rehoboth Beach, DE 19971</p>
-      <p class="hotel-desc">A long-standing Rehoboth favorite with 98 elegantly decorated rooms and suites set near Silver Lake. The Breakers offers a year-round heated rooftop indoor pool, a cozy reading lounge, and complimentary continental breakfast (served at sister hotel two blocks away). One- and two-bedroom suites feature balconies, microwaves, and separate living areas. One of the few dog-friendly hotels in town with 15 dedicated pet rooms. Beach chairs and umbrellas are complimentary for guests.</p>
-      <div class="hotel-pills">
-        <span class="pill gold">Continental Breakfast</span>
-        <span class="pill blue">Rooftop Indoor Pool</span>
-        <span class="pill blue">Dog-Friendly</span>
-        <span class="pill blue">Beach Chairs Included</span>
-        <span class="pill green">Free Parking</span>
-        <span class="pill green">Reading Lounge</span>
+    <div class="card">
+      <img class="card-img" src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?w=600&q=80" alt="Jet ski tour">
+      <div class="card-body">
+        <div class="card-tag">Jet Ski Tours</div>
+        <div class="card-name">Sea Rocket Water Adventures</div>
+        <div class="card-desc">Brand new fleet of Kawasaki jet skis. Guided 1-hour tours covering miles of Rehoboth Bay. Also offers combo packages with pontoon boat rentals.</div>
+        <div class="card-meta">📍 Dewey Beach · searocket.com</div>
       </div>
     </div>
-    <div class="hotel-header-image">
-      <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/c2/0a/01/breakers-hotel-suites.jpg?w=1200&h=-1&s=1" alt="Breakers Hotel">
-    </div>
-  </div>
-  <div class="room-grid three">
-    <div class="room-photo">
-      <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/c2/09/ec/breakers-hotel-suites.jpg?w=1200&h=-1&s=1" alt="Breakers room">
-      <span class="photo-label">Guest Room</span>
-    </div>
-    <div class="room-photo">
-      <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/c2/09/d0/breakers-hotel-suites.jpg?w=1200&h=-1&s=1" alt="Breakers suite">
-      <span class="photo-label">Balcony Suite</span>
-    </div>
-    <div class="room-photo">
-      <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/c2/09/b5/breakers-hotel-suites.jpg?w=1200&h=-1&s=1" alt="Breakers pool">
-      <span class="photo-label">Rooftop Pool</span>
-    </div>
-  </div>
-  <div class="hotel-cta"><a href="https://thebreakershotel.com/" target="_blank">Visit thebreakershotel.com →</a></div>
-</div>
-
-<!-- ════════════════════════════════════════════════════════ -->
-<!-- HOTEL 8: ADMIRAL ON BALTIMORE -->
-<!-- ════════════════════════════════════════════════════════ -->
-<div class="hotel-section" id="admiral">
-  <div class="hotel-header">
-    <div class="hotel-header-text">
-      <div class="hotel-number">08</div>
-      <p class="section-label">Beach-Adjacent · 60 Feet from the Sand</p>
-      <h2>Admiral on Baltimore</h2>
-      <p class="hotel-address">2 Baltimore Avenue · Rehoboth Beach, DE 19971</p>
-      <p class="hotel-desc">You can't get much closer to the beach without sleeping on the sand. The Admiral sits just 60 feet from Rehoboth Beach with ocean views from nearly every room. This family-owned hotel recently completed a major renovation with all new flooring, furniture, mattresses, and flat-screen TVs. The indoor pool features a glass ceiling for natural light and connects to a rooftop sundeck. Every room has a microwave, fridge, and coffee maker. No on-site restaurant or breakfast, but you're steps from dozens of options on the boardwalk.</p>
-      <div class="hotel-pills">
-        <span class="pill gold">60 Feet from Beach</span>
-        <span class="pill gold">Recently Renovated</span>
-        <span class="pill blue">Indoor Pool + Glass Ceiling</span>
-        <span class="pill blue">Rooftop Sundeck</span>
-        <span class="pill green">Free Parking</span>
-        <span class="pill green">Ocean Views</span>
+    <div class="card">
+      <img class="card-img" src="https://images.unsplash.com/photo-1504276048855-f3d60e69632f?w=600&q=80" alt="Parasailing">
+      <div class="card-body">
+        <div class="card-tag">Parasailing</div>
+        <div class="card-name">Sea Rocket Parasailing</div>
+        <div class="card-desc">Tandem parasailing over Rehoboth Bay. 12–15 minutes in the air; full trip takes about one hour. Ages 2+ can go tandem (max 425 lbs total).</div>
+        <div class="card-meta">📍 Dewey Beach · Great for Talia's Instagram!</div>
       </div>
     </div>
-    <div class="hotel-header-image">
-      <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/28/2c/c9/ba/admiral-on-baltimore.jpg?w=1200&h=-1&s=1" alt="Admiral on Baltimore">
+    <div class="card">
+      <img class="card-img" src="https://images.unsplash.com/photo-1530870110042-98b2cb110834?w=600&q=80" alt="Paddleboard">
+      <div class="card-body">
+        <div class="card-tag">Paddleboard & Kayak</div>
+        <div class="card-name">Delmarva Board Sport Adventures</div>
+        <div class="card-desc">Stand-up paddleboard lessons and rentals. Kayak tours of Rehoboth Bay. Also offers SUP yoga for those seeking something more meditative.</div>
+        <div class="card-meta">📍 19470 Coastal Hwy · Lessons available for beginners</div>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img" src="https://images.unsplash.com/photo-1530870110042-98b2cb110834?w=600&q=80" alt="Banana boat">
+      <div class="card-body">
+        <div class="card-tag">Group Fun</div>
+        <div class="card-name">Banana Boat Rides</div>
+        <div class="card-desc">Bounce and slide across Rehoboth Bay on an inflatable banana boat. Available at both Dewey Beach Watersports and Sea Rocket. 15-minute rides tailored to all ages.</div>
+        <div class="card-meta">📍 Dewey Beach · Perfect for the whole crew</div>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img" src="https://rbsurf.school/files/2022/04/D6KReKC0.jpeg?w=1600&a=t" alt="RB Surf School">
+      <div class="card-body">
+        <div class="card-tag">Surf Lessons</div>
+        <div class="card-name">RB Surf School</div>
+        <div class="card-desc">Learn to ride the waves in Rehoboth Beach. Lessons available for all ages and skill levels. Summer camps also available for kids.</div>
+        <div class="card-meta">📍 Rehoboth Beach · Great for Ari and Talia</div>
+      </div>
     </div>
   </div>
-  <div class="room-grid three">
-    <div class="room-photo">
-      <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/28/2c/c9/c3/admiral-on-baltimore.jpg?w=1200&h=-1&s=1" alt="Admiral room">
-      <span class="photo-label">Renovated Room</span>
+</section>
+
+<!-- ========== BOAT RENTALS & CRUISES ========== -->
+<section class="section" id="cruises">
+  <div class="section-header">
+    <span class="section-number">V</span>
+    <h2 class="section-title">Boat Rentals & Cruises</h2>
+    <p class="section-subtitle">From sunset serenity to dolphin encounters</p>
+    <div class="section-line"></div>
+  </div>
+  <div class="card-grid">
+    <div class="card">
+      <img class="card-img" src="https://lh3.googleusercontent.com/places/ANXAkqGzXm0UBRh8gzB69df-kV22huqy24-uZOD6F83qCAIxY2UWOj3qXp41-jz6uJWNaLOlLD-XaKPaAMlbG2kqruxF_ClAn6q05wM=s800-w800-h600" alt="Sea Rocket Pontoon">
+      <div class="card-body">
+        <div class="card-tag">Pontoon Rental</div>
+        <div class="card-name">Sea Rocket Pontoon Boats</div>
+        <div class="card-desc">Be your own captain. Standard pontoons hold up to 10 people. Double-decker party pontoon holds 14 with a water slide off the top deck. Perfect for a family afternoon on Rehoboth Bay.</div>
+        <div class="card-meta">📍 Dewey Beach · Half-day & full-day rentals · searocket.com</div>
+      </div>
     </div>
-    <div class="room-photo">
-      <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/28/2c/c9/ae/admiral-on-baltimore.jpg?w=1200&h=-1&s=1" alt="Admiral king room">
-      <span class="photo-label">King with View</span>
+    <div class="card">
+      <img class="card-img" src="https://lh3.googleusercontent.com/places/ANXAkqHEy1ZWQhlJYbLEa97iI9pwJIBPMfCRDAwQHZjSSeofLJef65Qsf4zk2Es7sY9x5TnI3Cq6oLEdmgxqTv0scVqiI7bwkOUg5Zc=s800-w800-h600" alt="Dewey Beach Watersports Pontoon">
+      <div class="card-body">
+        <div class="card-tag">Pontoon Rental</div>
+        <div class="card-name">Dewey Beach Watersports Pontoons</div>
+        <div class="card-desc">Comfortable, safe pontoon boats for cruising Rehoboth Bay. Stops at Rehoboth Beach Country Club, Tower Beach, and the canal. Swim ladder for ocean dips.</div>
+        <div class="card-meta">📍 South of Ruddertowne · deweybeachwatersports.com</div>
+      </div>
     </div>
-    <div class="room-photo">
-      <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/25/c9/b2/6b/admiral-on-baltimore.jpg?w=1200&h=-1&s=1" alt="Admiral pool">
-      <span class="photo-label">Glass-Ceiling Pool</span>
+    <div class="card">
+      <img class="card-img" src="https://lh3.googleusercontent.com/place-photos/AL8-SNE0pYIlHuohZnHztwiEwWpTbt3XQpBjToy642bNCwyqXf-8WBJQSo3C6iSl95Q7_VZjKm-pbNbncBBukRN5UzeBf2eY8_3MC3M0_FFImdh1FgFnBu1vLV9ARG6Ve8gIwCutixD30NtSDaJRAA=s800-w800-h600" alt="Fisherman Wharf Dolphin Cruise">
+      <div class="card-body">
+        <div class="card-tag">Dolphin Watch</div>
+        <div class="card-name">Fisherman's Wharf — Dolphin Cruise</div>
+        <div class="card-desc">Operating since 1962 from Lewes. Cruise into the Delaware Bay and Atlantic to spot bottlenose dolphins in their natural habitat. Continental breakfast included on morning sails.</div>
+        <div class="card-meta">📍 107 Anglers Rd, Lewes · fishlewes.com · (302) 645-8862</div>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img" src="https://lh3.googleusercontent.com/place-photos/AL8-SNG88kZrqAyz6r9nkl4eMbVJmZDaBsQwjfS_XSVvPsIiBcSwr5A1nxA5h7qteHiXmDcAkeIzIK_NDCNnoj84oy-iERjRa_vo8242A8WG7PHL9d-f5BZzdp9f95aPNYnkOGtzEnKO7r1MS5vpAv0=s800-w800-h600" alt="Fisherman Wharf Sunset Cruise">
+      <div class="card-body">
+        <div class="card-tag">Sunset Cruise</div>
+        <div class="card-name">Fisherman's Wharf — Sunset Cruise</div>
+        <div class="card-desc">A 2-hour evening cruise on the Delaware Bay. Watch the sunset while passing historic lighthouses. Late June departure at 7:00 PM. Often includes dolphin sightings.</div>
+        <div class="card-meta">📍 Lewes · Perfect for the whole family</div>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img" src="https://lh3.googleusercontent.com/place-photos/AL8-SNG4nE0CTwoSIyQKeJjePlhKkUxIV3hVi5E-8GCSXpnvcJ1mln2INrF1o-HWmiPcHpXC-G8uKKdApH7wmNDZempXidM-HbKOXdhitts3k6qMzvwNMBqQ9aEmxMCtlcRyUC9m988xqb-9Sl0ybnKcxMX1=s800-w800-h600" alt="Cape Water Tours">
+      <div class="card-body">
+        <div class="card-tag">Eco Tours</div>
+        <div class="card-name">Cape Water Tours & Taxi</div>
+        <div class="card-desc">Over 20 different tours: narrated ecology cruises, birding tours, live music cruises, dolphin watches, and sunset sails. Private charters accommodate up to 100 guests.</div>
+        <div class="card-meta">📍 Lewes · capewatertours.com</div>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img" src="https://images.unsplash.com/photo-1519451241324-20b4ea2c4220?w=600&q=80" alt="Sailing">
+      <div class="card-body">
+        <div class="card-tag">Sailing</div>
+        <div class="card-name">Rehoboth Bay Sailing Association</div>
+        <div class="card-desc">Rental fleet of Sunfish, Hobie Cats, and day sailors. Perfect for experienced sailors who want to cruise the bay on their own terms.</div>
+        <div class="card-meta">📍 Dewey Beach</div>
+      </div>
     </div>
   </div>
-  <div class="hotel-cta"><a href="https://admiralonbaltimore.com/" target="_blank">Visit admiralonbaltimore.com →</a></div>
+</section>
+
+<!-- ========== WALKS & BIKING ========== -->
+<section class="section" id="walks">
+  <div class="section-header">
+    <span class="section-number">VI</span>
+    <h2 class="section-title">Walking, Biking & Nature</h2>
+    <p class="section-subtitle">Boardwalk strolls for Tata & Paati, scenic trails for the adventurous</p>
+    <div class="section-line"></div>
+  </div>
+
+  <ul class="venue-list">
+    <li class="venue-item">
+      <span class="venue-num">01</span>
+      <div class="venue-info">
+        <h4>Rehoboth Beach Boardwalk</h4>
+        <p>The iconic mile-long boardwalk stretches from Deauville Beach north past the bandstand, lined with shops, arcades, Funland, and eateries. Open until 10 PM in summer. Biking permitted 5–10 AM only (May 15 – Sept 15). Perfect for Tata & Paati's evening strolls and Shreyes' baby walks.</p>
+        <div class="venue-detail">📍 2-minute walk from The Bellmoor · Boardwalk classics: Thrasher's Fries, Kohr Bros Ice Cream, Fisher's Popcorn</div>
+      </div>
+    </li>
+    <li class="venue-item">
+      <span class="venue-num">02</span>
+      <div class="venue-info">
+        <h4>Gordon's Pond Trail</h4>
+        <p>A stunning 5+ mile out-and-back trail through salt marshes, dunes, and wetlands of Cape Henlopen State Park. Elevated boardwalk with scenic overlooks. Connects Rehoboth to Lewes. Biden's favorite bike trail — this is where he rides when in town.</p>
+        <div class="venue-detail">📍 Access from Gordon's Pond parking lot, Rehoboth · Crushed gravel, easy grade · Bird watching paradise</div>
+      </div>
+    </li>
+    <li class="venue-item">
+      <span class="venue-num">03</span>
+      <div class="venue-info">
+        <h4>Junction & Breakwater Trail</h4>
+        <p>6-mile paved and crushed stone trail connecting Rehoboth and Lewes along a historic railroad route. Mix of wooded areas and open fields. Trailhead accessible from western end of Rehoboth Avenue, behind the outlets.</p>
+        <div class="venue-detail">📍 Trailhead near Tanger Outlets · Can combine with Gordon's Pond for a 15-mile loop</div>
+      </div>
+    </li>
+    <li class="venue-item">
+      <span class="venue-num">04</span>
+      <div class="venue-info">
+        <h4>Rehoboth Avenue & Downtown</h4>
+        <p>The main commercial street stretching from Route 1 to the boardwalk. Lined with restaurants, shops, galleries, and ice cream parlors. A gentle, flat walk ideal for all ages. Great for an evening family stroll.</p>
+        <div class="venue-detail">📍 Steps from The Bellmoor · Tax-free shopping · Penny Lane Mall, First Street Station</div>
+      </div>
+    </li>
+    <li class="venue-item">
+      <span class="venue-num">05</span>
+      <div class="venue-info">
+        <h4>Cape Henlopen State Park Trails</h4>
+        <p>7,000 acres of coastal wilderness. Multiple hiking trails through maritime forest, sand dunes, and along the ocean. Visit WWII fire control towers and the Fort Miles Museum. Nature center with free bike rentals available.</p>
+        <div class="venue-detail">🚗 10 min from hotel · Park entrance fee · Guided kayak and pontoon tours available</div>
+      </div>
+    </li>
+    <li class="venue-item">
+      <span class="venue-num">06</span>
+      <div class="venue-info">
+        <h4>Historic Lewes</h4>
+        <p>Delaware's "First Town" (founded 1631) is a charming colonial village just 15 minutes north. Walk cobblestone streets past the Zwaanendael Museum, Lightship Overfalls, and Cannonball House. Beautiful boutique shopping and waterfront dining.</p>
+        <div class="venue-detail">🚗 15 min from hotel · Great half-day excursion · Cape May–Lewes Ferry terminal</div>
+      </div>
+    </li>
+    <li class="venue-item">
+      <span class="venue-num">07</span>
+      <div class="venue-info">
+        <h4>Bike Rentals</h4>
+        <p>Multiple bike rental shops in downtown Rehoboth and Lewes offering cruisers, tandem bikes, family bikes, and e-bikes. Bikes are the perfect way to explore the trail network.</p>
+        <div class="venue-detail">📍 Available along Rehoboth Avenue · Helmets included</div>
+      </div>
+    </li>
+  </ul>
+</section>
+
+<!-- ========== PICKLEBALL & MINI GOLF ========== -->
+<section class="section" id="pickleball">
+  <div class="section-header">
+    <span class="section-number">VII</span>
+    <h2 class="section-title">Pickleball, Mini Golf & Active Fun</h2>
+    <p class="section-subtitle">For Ari, Kat, and anyone with competitive spirit</p>
+    <div class="section-line"></div>
+  </div>
+  <div class="two-col">
+    <div>
+      <div class="sub-section">
+        <h3 class="sub-title">Pickleball Courts</h3>
+        <ul class="venue-list">
+          <li class="venue-item">
+            <span class="venue-num">🏓</span>
+            <div class="venue-info">
+              <h4>Rehoboth Beach Elementary School</h4>
+              <p>4 dedicated outdoor courts with permanent nets and lines. Free to use. Available before 8 AM and after 4:30 PM during school year; all day in summer.</p>
+              <div class="venue-detail">📍 500 Stockley St, Rehoboth Beach</div>
+            </div>
+          </li>
+          <li class="venue-item">
+            <span class="venue-num">🏓</span>
+            <div class="venue-info">
+              <h4>Dave Marshall Tennis & Fitness</h4>
+              <p>12 indoor pickleball courts in Lewes. Pay-to-play facility with lessons and clinics available. Great rainy-day option.</p>
+              <div class="venue-detail">📍 Lewes · davemarshalltennis.com · (302) 402-5440</div>
+            </div>
+          </li>
+          <li class="venue-item">
+            <span class="venue-num">🏓</span>
+            <div class="venue-info">
+              <h4>Factory Sports</h4>
+              <p>Indoor courts in Lewes with scheduled open play times. Good for families wanting a guaranteed court.</p>
+              <div class="venue-detail">📍 Lewes · factorysportsde.com</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <div class="sub-section">
+        <h3 class="sub-title">Mini Golf & Family Fun</h3>
+        <ul class="venue-list">
+          <li class="venue-item">
+            <span class="venue-num">⛳</span>
+            <div class="venue-info">
+              <h4>Shell We Golf</h4>
+              <p>Classic outdoor mini golf on the coastal highway. A Rehoboth family tradition.</p>
+              <div class="venue-detail">📍 19366 Coastal Hwy · (302) 227-4323</div>
+            </div>
+          </li>
+          <li class="venue-item">
+            <span class="venue-num">⛳</span>
+            <div class="venue-info">
+              <h4>Zelky's Rooftop Mini Golf</h4>
+              <p>Mini golf with ocean views right on the boardwalk. Fun for the whole family with a view.</p>
+              <div class="venue-detail">📍 Boardwalk, Rehoboth Beach</div>
+            </div>
+          </li>
+          <li class="venue-item">
+            <span class="venue-num">🎡</span>
+            <div class="venue-info">
+              <h4>Funland</h4>
+              <p>Rehoboth's legendary boardwalk amusement park with rides, arcade games, and skee-ball. Affordable and beloved by families for decades. Open nightly in summer.</p>
+              <div class="venue-detail">📍 On the Boardwalk · Ticket-based pricing</div>
+            </div>
+          </li>
+          <li class="venue-item">
+            <span class="venue-num">🌊</span>
+            <div class="venue-info">
+              <h4>Jungle Jim's Waterpark</h4>
+              <p>Delaware's largest waterpark with wave pool, lazy river, kiddie pool, giant water slides, and rope climb.</p>
+              <div class="venue-detail">📍 Entrance to Rehoboth Beach on Route 1</div>
+            </div>
+          </li>
+          <li class="venue-item">
+            <span class="venue-num">🏎️</span>
+            <div class="venue-info">
+              <h4>Midway Speedway Park</h4>
+              <p>Go-karts, mini golf, and waterpark combined. Great for Ari's adventure needs.</p>
+              <div class="venue-detail">📍 Route 1, north of Rehoboth</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== SHOWS ========== -->
+<section class="section" id="shows">
+  <div class="section-header">
+    <span class="section-number">VIII</span>
+    <h2 class="section-title">Shows & Entertainment</h2>
+    <p class="section-subtitle">Evenings alive with music, theater, and seaside charm</p>
+    <div class="section-line"></div>
+  </div>
+  <div class="card-grid">
+    <div class="card">
+      <img class="card-img" src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=600&q=80" alt="Concert">
+      <div class="card-body">
+        <div class="card-tag">Free Concerts</div>
+        <div class="card-name">Rehoboth Beach Bandstand</div>
+        <div class="card-desc">Free live concerts since 1963 at the iconic gazebo where Rehoboth Avenue meets the boardwalk. Performances at 8 PM on weekend evenings (some weekday shows in 2026). Genres range from rock tributes and Motown to military bands and jazz.</div>
+        <div class="card-meta">📍 End of Rehoboth Ave at Boardwalk · Free · Bring folding chairs</div>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img" src="https://images.unsplash.com/photo-1503095396549-807759245b35?w=600&q=80" alt="Theater">
+      <div class="card-body">
+        <div class="card-tag">Live Theater</div>
+        <div class="card-name">Clear Space Theatre Company</div>
+        <div class="card-desc">Professional theater in downtown Rehoboth Beach offering Broadway hits, dramas, and family-friendly shows year-round. Intimate setting with high-quality performances. Past shows include Jersey Boys and Sweeney Todd.</div>
+        <div class="card-meta">📍 20 Baltimore Ave, Rehoboth Beach · Check schedule for June dates</div>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img" src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=600&q=80" alt="Live Music">
+      <div class="card-body">
+        <div class="card-tag">Live Music Venues</div>
+        <div class="card-name">Milton Theatre & Area Venues</div>
+        <div class="card-desc">The Milton Theatre (20 min drive) hosts touring acts year-round. The Freeman Stage at Bayside in Fenwick Island has a large lineup of free outdoor shows all summer. The Bottle & Cork in Dewey Beach features live bands.</div>
+        <div class="card-meta">📍 Multiple venues · Check bandsintown.com for June 25–28 schedule</div>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img" src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=600&q=80" alt="Movies">
+      <div class="card-body">
+        <div class="card-tag">Cinema</div>
+        <div class="card-name">Movies at Midway & Cinema Art Theater</div>
+        <div class="card-desc">Movies at Midway offers 14 screens with first-run films. The Cinema Art Theater (run by Rehoboth Beach Film Society) shows art-house and compelling films. Biden and Jill famously caught Oppenheimer at Midway.</div>
+        <div class="card-meta">📍 Route 1 · Great rainy day option</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== SPORTS ========== -->
+<section class="section" id="sports">
+  <div class="section-header">
+    <span class="section-number">IX</span>
+    <h2 class="section-title">Sports to Watch</h2>
+    <p class="section-subtitle">For Satwik and Shreyes — keeping up with the action</p>
+    <div class="section-line"></div>
+  </div>
+  <div class="highlight-box">
+    <h3>Sports Viewing in Rehoboth Area</h3>
+    <p>While Rehoboth Beach doesn't host major league sports venues, there are several excellent sports bars for catching Phillies, Sixers, and Eagles games. Recommended spots for game day:</p>
+    <p style="margin-top:1rem;">
+      <strong style="color:var(--gold-light);">Thompson Island Brewery</strong> — Large screens, great craft beer selection, lively atmosphere<br>
+      <strong style="color:var(--gold-light);">Above the Dunes</strong> — Multiple TVs, full menu, renovated space<br>
+      <strong style="color:var(--gold-light);">The Pines</strong> — Gastropub with screens and excellent cocktails<br>
+      <strong style="color:var(--gold-light);">AQUA Bar & Grill</strong> — Spacious outdoor deck, casual dining with game viewing<br>
+      <strong style="color:var(--gold-light);">Rehoboth Ale House</strong> — Full menu served 7 days starting at 11 AM, multiple screens
+    </p>
+    <p style="margin-top:1rem;"><em>Note: Late June coincides with MLB regular season (Phillies), NBA/NHL off-season, and NFL pre-season. Check schedules for any Phillies games during the trip.</em></p>
+  </div>
+</section>
+
+<!-- ========== SHOPPING ========== -->
+<div class="divider-full">
+  <p class="quote">"Delaware has no sales tax — everything you buy in Rehoboth Beach is tax-free."</p>
 </div>
 
-<!-- ===== FOOTER ===== -->
-<footer>
-  <p class="footer-text">The Seshasai Family · Rehoboth Beach Weekend 2026</p>
-  <p class="footer-sub">June 25–28, 2026 · Curated Accommodation Guide · 8 Hotels Compared</p>
+<section class="section" id="shopping">
+  <div class="section-header">
+    <span class="section-number">X</span>
+    <h2 class="section-title">Boutique Shopping</h2>
+    <p class="section-subtitle">For Rebecca, Talia, Kat, and Karuna — retail therapy, elevated</p>
+    <div class="section-line"></div>
+  </div>
+  <div class="two-col">
+    <div>
+      <h3 class="sub-title">Downtown Boutiques</h3>
+      <ul class="venue-list">
+        <li class="venue-item">
+          <span class="venue-num">01</span>
+          <div class="venue-info">
+            <h4>Penny Lane Mall</h4>
+            <p>European-inspired open-air mall in the heart of downtown. Eclectic mix of boutiques, gift shops, and cafés. Instagram-worthy setting with vintage charm.</p>
+            <div class="venue-detail">📍 42 Rehoboth Ave · 4.6★ on Google</div>
+          </div>
+        </li>
+        <li class="venue-item">
+          <span class="venue-num">02</span>
+          <div class="venue-info">
+            <h4>Grace Boutique</h4>
+            <p>Premier women's clothing and accessory boutique. Curated coastal fashion, jewelry, and gifts.</p>
+            <div class="venue-detail">📍 Downtown Rehoboth</div>
+          </div>
+        </li>
+        <li class="venue-item">
+          <span class="venue-num">03</span>
+          <div class="venue-info">
+            <h4>Top It Off</h4>
+            <p>Charming women's boutique with curated apparel, accessories, hats, scarves, and coastal-chic gifts.</p>
+            <div class="venue-detail">📍 Downtown Rehoboth</div>
+          </div>
+        </li>
+        <li class="venue-item">
+          <span class="venue-num">04</span>
+          <div class="venue-info">
+            <h4>Mod Cottage</h4>
+            <p>Seaside elegance boutique — carries Kai fragrances (a Reese Witherspoon favorite). Curated home goods and fashion.</p>
+            <div class="venue-detail">📍 Downtown Rehoboth</div>
+          </div>
+        </li>
+        <li class="venue-item">
+          <span class="venue-num">05</span>
+          <div class="venue-info">
+            <h4>BRASHhh Menswear</h4>
+            <p>Go-to menswear boutique with premium worldwide brands and sharp styling. Great for Satwik and Shreyes.</p>
+            <div class="venue-detail">📍 Downtown Rehoboth</div>
+          </div>
+        </li>
+        <li class="venue-item">
+          <span class="venue-num">06</span>
+          <div class="venue-info">
+            <h4>The Lilypad Children's Boutique</h4>
+            <p>Children's clothing, gifts, and accessories. Winner of Best of Delaware 2021 & 2022.</p>
+            <div class="venue-detail">📍 149 Rehoboth Ave, Villages by the Sea</div>
+          </div>
+        </li>
+        <li class="venue-item">
+          <span class="venue-num">07</span>
+          <div class="venue-info">
+            <h4>Browseabout Books</h4>
+            <p>Beloved independent bookstore since 1975. Books, toys, games, and a coffee corner. Local author events. 4.7★ with 1.7K reviews.</p>
+            <div class="venue-detail">📍 Downtown Rehoboth</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="sub-title">Specialty & Outlets</h3>
+      <ul class="venue-list">
+        <li class="venue-item">
+          <span class="venue-num">08</span>
+          <div class="venue-info">
+            <h4>Shops at Rehoboth Mews</h4>
+            <p>Brick-lined walkway of artisan shops with The Coffee Mill as anchor. Art galleries, jewelry, lighting, and Archie's Ice Cream.</p>
+            <div class="venue-detail">📍 40 Baltimore Ave</div>
+          </div>
+        </li>
+        <li class="venue-item">
+          <span class="venue-num">09</span>
+          <div class="venue-info">
+            <h4>Coastal Native</h4>
+            <p>Local handmade goods with positive intentions and sustainable ideals. Art, gifts, and beach merchandise.</p>
+            <div class="venue-detail">📍 Near the Boardwalk</div>
+          </div>
+        </li>
+        <li class="venue-item">
+          <span class="venue-num">10</span>
+          <div class="venue-info">
+            <h4>The Spice & Tea Exchange</h4>
+            <p>Fragrant haven for spice and tea enthusiasts. Over 100 varieties of spice blends and teas. 4.8★ on Google.</p>
+            <div class="venue-detail">📍 Downtown Rehoboth</div>
+          </div>
+        </li>
+        <li class="venue-item">
+          <span class="venue-num">11</span>
+          <div class="venue-info">
+            <h4>Kilwins Chocolates & Ice Cream</h4>
+            <p>Legendary confectionery with handcrafted fudge, chocolates, and ice cream. A boardwalk tradition.</p>
+            <div class="venue-detail">📍 Downtown Rehoboth</div>
+          </div>
+        </li>
+        <li class="venue-item">
+          <span class="venue-num">12</span>
+          <div class="venue-info">
+            <h4>Tanger Outlets</h4>
+            <p>Three outlet centers on Route 1 with 130+ stores: Nike, Kate Spade, Polo Ralph Lauren, Michael Kors, J. Crew, Pandora, and more. All tax-free.</p>
+            <div class="venue-detail">🚗 Route 1, short drive · tangeroutlet.com</div>
+          </div>
+        </li>
+        <li class="venue-item">
+          <span class="venue-num">13</span>
+          <div class="venue-info">
+            <h4>Rehoboth Art League</h4>
+            <p>Galleries and studios in a serene pine forest setting in Henlopen Acres. Rotating exhibits of local artwork, most pieces for sale at reasonable prices.</p>
+            <div class="venue-detail">📍 Henlopen Acres · Tranquil contrast to boardwalk energy</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ========== COFFEE ========== -->
+<section class="section" id="coffee">
+  <div class="section-header">
+    <span class="section-number">XI</span>
+    <h2 class="section-title">Coffee & Morning Rituals</h2>
+    <p class="section-subtitle">For Rebecca, and all those who run on caffeine</p>
+    <div class="section-line"></div>
+  </div>
+  <div class="card-grid">
+    <div class="card">
+      <img class="card-img" src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&q=80" alt="Coffee">
+      <div class="card-body">
+        <div class="card-tag">Local Icon</div>
+        <div class="card-name">The Coffee Mill</div>
+        <div class="card-desc">A Rehoboth icon for over 33 years, tucked in the Mews Alley. Six blends brewed fresh daily, plus 120+ whole-bean varieties. Fresh baked goods, sandwiches, and courtyard seating. Free Wi-Fi.</div>
+        <div class="card-meta">📍 40 Baltimore Ave (Rehoboth Mews) · coffeemillreho.com</div>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img" src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&q=80" alt="Coffee shop">
+      <div class="card-body">
+        <div class="card-tag">Craft Roasters</div>
+        <div class="card-name">Rise Up Coffee Roasters</div>
+        <div class="card-desc">Founded by a Peace Corps veteran, now a Rehoboth favorite. Organic, strong, grab-and-go. Located at the old 7-11 circle location. Great for a quick fuel-up before the beach.</div>
+        <div class="card-meta">📍 Coastal Highway, Rehoboth circle</div>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img" src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=600&q=80" alt="Cafe">
+      <div class="card-body">
+        <div class="card-tag">Mexican Specialties</div>
+        <div class="card-name">Café A Go-Go</div>
+        <div class="card-desc">Rehoboth staple since 2005. Coffee blends, espresso, food, and the popular Mexican hot chocolate. Unique flavor profiles you won't find elsewhere.</div>
+        <div class="card-meta">📍 Downtown Rehoboth</div>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img" src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=600&q=80" alt="Breakfast">
+      <div class="card-body">
+        <div class="card-tag">Viennese Café</div>
+        <div class="card-name">Kaisy's Delights</div>
+        <div class="card-desc">A blend of Viennese café and American diner. Try the signature "Kaisy" pastry with your latte. Charming and unique.</div>
+        <div class="card-meta">📍 Rehoboth Beach area</div>
+      </div>
+    </div>
+  </div>
+  <p style="text-align:center; margin-top:2rem; font-size:0.85rem; color:var(--slate); font-style:italic;">Note: Complimentary breakfast including fresh coffee is served at The Bellmoor each morning from 7:30–10:30 AM</p>
+</section>
+
+<!-- ========== LUNCH ========== -->
+<section class="section" id="lunch">
+  <div class="section-header">
+    <span class="section-number">XII</span>
+    <h2 class="section-title">Lunch & Casual Dining</h2>
+    <p class="section-subtitle">Midday refueling from boardwalk bites to coastal cuisine</p>
+    <div class="section-line"></div>
+  </div>
+  <div class="card-grid">
+    <div class="card">
+      <img class="card-img" src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=600&q=80" alt="Seafood">
+      <div class="card-body">
+        <div class="card-tag">Seafood</div>
+        <div class="card-name">Claws Seafood House</div>
+        <div class="card-desc">"World famous" happy hour and superb Maryland Blue Crabs. Centrally located two blocks from the beach. A Rehoboth institution for crab lovers.</div>
+        <div class="card-meta">📍 167 Rehoboth Ave</div>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img" src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&q=80" alt="Pizza">
+      <div class="card-body">
+        <div class="card-tag">Family Favorite</div>
+        <div class="card-name">Grotto Pizza</div>
+        <div class="card-desc">A Rehoboth Beach legend. Great for families, easy for takeout. Many families make it a nightly tradition. Multiple locations.</div>
+        <div class="card-meta">📍 Rehoboth Ave · Open year-round</div>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img" src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=600&q=80" alt="Deli">
+      <div class="card-body">
+        <div class="card-tag">Hidden Gem</div>
+        <div class="card-name">Frank & Louie's Italian Deli</div>
+        <div class="card-desc">Top sandwich shop off Maryland Avenue. Opens at 10 AM and the line forms fast. Call ahead. Don't skip the butter cake.</div>
+        <div class="card-meta">📍 Off Maryland Ave · Call ahead to order</div>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img" src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=600&q=80" alt="Brunch">
+      <div class="card-body">
+        <div class="card-tag">Breakfast & Lunch</div>
+        <div class="card-name">Egg</div>
+        <div class="card-desc">Creative cuisine on Rehoboth Avenue. Biden's go-to brunch spot — he and Jill used to bike here. Open year-round for breakfast and lunch.</div>
+        <div class="card-meta">📍 Rehoboth Ave · Biden-approved 🇺🇸</div>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img" src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&q=80" alt="Brewery">
+      <div class="card-body">
+        <div class="card-tag">Brewpub</div>
+        <div class="card-name">Dogfish Head Brewings & Eats</div>
+        <div class="card-desc">Scratch-made brewpub menu with wood-fired pizzas, crab corn chowder, and off-centered ales. Brewpub exclusive beers. Delaware's most famous brewery.</div>
+        <div class="card-meta">📍 320 Rehoboth Ave · dogfish.com</div>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img" src="https://lh3.googleusercontent.com/places/ANXAkqFVZX5EuGzd__yaOWWkMvq5Nh3UiLB0FPAY0IsB455omyeETjQfriIuAU93rBOJd8sYbc8REqsbNPobCNROwMZSM45OWu99A_Y=s800-w800-h600" alt="Chesapeake and Maine">
+      <div class="card-body">
+        <div class="card-tag">Casual Coastal</div>
+        <div class="card-name">Chesapeake & Maine</div>
+        <div class="card-desc">Dogfish Head's seafood restaurant. Exclusively sourced from the Chesapeake and Maine regions. Nautical-themed atmosphere with handcrafted cocktails.</div>
+        <div class="card-meta">📍 Rehoboth Ave</div>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top:2rem;">
+    <h3 class="sub-title">Boardwalk Essentials</h3>
+    <p style="font-size:0.9rem; color:var(--slate); line-height:2;">
+      <strong>Thrasher's French Fries</strong> — The original boardwalk fries, salty and crispy, vinegar only &nbsp;·&nbsp;
+      <strong>Kohr Brothers Ice Cream</strong> — Frozen custard, a multi-daily tradition &nbsp;·&nbsp;
+      <strong>Fisher's Popcorn</strong> — Get it fresh and warm &nbsp;·&nbsp;
+      <strong>Snyder's Candy</strong> — Saltwater taffy and fudge &nbsp;·&nbsp;
+      <strong>Double Dippers</strong> — 40+ flavors of Hershey's Ice Cream &nbsp;·&nbsp;
+      <strong>Café Papillon</strong> — Authentic French crepes at a boardwalk stand
+    </p>
+  </div>
+</section>
+
+<!-- ========== DINNER ========== -->
+<section class="section" id="dinner">
+  <div class="section-header">
+    <span class="section-number">XIII</span>
+    <h2 class="section-title">Fine Dining & Evening Restaurants</h2>
+    <p class="section-subtitle">For Talia's fancy dinner dreams and the whole family's culinary pleasure</p>
+    <div class="section-line"></div>
+  </div>
+  <div class="card-grid">
+    <div class="card">
+      <img class="card-img" src="https://lh3.googleusercontent.com/places/ANXAkqFzVCi-mRk7Ad2MKkRq0OigPOukRgbM18e7E0t0Jvgwv4tWYxX3FWlfwktf-3dOmfcuDw5uinjcwnhVNoEha0VEBn1DQpMLjSI=s800-w800-h600" alt="Fine dining">
+      <div class="card-body">
+        <div class="card-tag">French Brasserie</div>
+        <div class="card-name">La Fable Brasserie</div>
+        <div class="card-desc">Traditional French cuisine with bohemian Parisian street café flair. On the beach block of Baltimore Avenue. Perfect for Talia's fancy dinner. Reservations recommended.</div>
+        <div class="card-meta">📍 Baltimore Ave · OpenTable Diner's Choice</div>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img" src="https://lh3.googleusercontent.com/places/ANXAkqFlb4T9066M4uXYuS6IWLdhIt9BXfNpetloCbAyCBZQp4SwUwX_tlQ1lEBaG1LE9iCGOfeD_n5LU6KvLA9fkc1OfMzNXm-80WQ=s800-w800-h600" alt="Henlopen City Oyster House">
+      <div class="card-body">
+        <div class="card-tag">Seafood</div>
+        <div class="card-name">Henlopen City Oyster House</div>
+        <div class="card-desc">Fresh-shucked oysters, lobster rolls, crawfish gumbo, king crab legs. Next to The Bellmoor. No reservations — arrive early. Parties up to 9.</div>
+        <div class="card-meta">📍 Adjacent to hotel · Walk-in only · Arrive by 5 PM</div>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img" src="https://lh3.googleusercontent.com/places/ANXAkqG26FfsgF8Wjr9d8TQnuDepT4p5-uuOXMXFst1CcO_zLXdhVwT375novJFQILnPLG0klvQeC1m-6_myqXkSuCNb4blefJQHGg=s800-w800-h600" alt="Upscale">
+      <div class="card-body">
+        <div class="card-tag">Farm to Table</div>
+        <div class="card-name">Salt Air</div>
+        <div class="card-desc">Fresh coastal cuisine with farm-to-table ingredients. One of the best date-night or family dinner spots in Rehoboth. Upscale atmosphere with great hospitality. Reserve well in advance.</div>
+        <div class="card-meta">📍 Downtown Rehoboth · Reserve months ahead for summer</div>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img" src="https://lh3.googleusercontent.com/place-photos/AL8-SNGdUrvdYjoZceNCBQXID-K80gRLo835y0dTN5ZNPqfI5aJX8HRj_Pmu-4xMnz5Sf_Q56-DSgVWTWqnTJVSofY2s92MqRl1CNePLeY7uOMTkKzYbAfWbCWPcbHK76D96kHtqpTsmPOFT-Jv2nQM=s800-w800-h600" alt="Restaurant">
+      <div class="card-body">
+        <div class="card-tag">Victorian Fine Dining</div>
+        <div class="card-name">The Blue Moon</div>
+        <div class="card-desc">In an elegant Victorian beach house, widely regarded as one of the region's best. Southern, French, and Italian cuisine. Bison tartare, lamb rack, seared foie gras.</div>
+        <div class="card-meta">📍 Downtown Rehoboth · OpenTable reservations</div>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img" src="https://lh3.googleusercontent.com/places/ANXAkqHKfMqhaNqem55952IwG8c6XmWjBHIaZdO3dRVxkBKZtKgSMgEs7JNeslfiXSp0fgzqrXrl3nJD4nZQshSBRPtO3VrafUt3I-A=s800-w800-h600" alt="Bistro">
+      <div class="card-body">
+        <div class="card-tag">Fine-Dining Bistro</div>
+        <div class="card-name">The Federal Rehoboth</div>
+        <div class="card-desc">A block from the boardwalk. Chef Todd Gray's menu reads like a postcard from the Mid-Atlantic, honoring Delmarva's seasonal harvest. Plus Federal Fritters for snacking.</div>
+        <div class="card-meta">📍 Near Boardwalk · OpenTable</div>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img" src="https://lh3.googleusercontent.com/place-photos/AL8-SNEV-0o7gwvKEJuH1CP42mLnWs-7X-4eTK9KSriqJpgdgRlzEmUIjReGe-Pluc-d3RUuIcL8twawp9I4U7dpL6q0cPiPfJr-1iHpoE_5j9KuNdv4GuhSoaHrYSeznKwiRfUyL302HIpzSHTsTvhJFLXjXg=s800-w800-h600" alt="Steakhouse">
+      <div class="card-body">
+        <div class="card-tag">Steakhouse</div>
+        <div class="card-name">Houston White</div>
+        <div class="card-desc">Pricey but worth every penny. Sophisticated atmosphere with exquisite steaks and a refined dining experience. A top Yelp-rated fine dining choice.</div>
+        <div class="card-meta">📍 Downtown Rehoboth · Reservations essential</div>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img" src="https://lh3.googleusercontent.com/places/ANXAkqF4sd8IMbR9FDA5BrSwdWeLqsjH52aRecgWe3tIBksrrO79mpVI_uwUyZhIxjpgc_SrcWyP5okYd8nkoR5ln5I9P9ttysc4eEw=s800-w800-h600" alt="Mediterranean">
+      <div class="card-body">
+        <div class="card-tag">Mediterranean</div>
+        <div class="card-name">Café Azafran</div>
+        <div class="card-desc">Award-winning Mediterranean and Spanish cuisine. Two-time Top Chef of the Culinary Coast winner. Cozy dining room with screened-in porch. Live entertainment Thursdays.</div>
+        <div class="card-meta">📍 Ocean block of Baltimore Ave · cafeazafran.com</div>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img" src="https://lh3.googleusercontent.com/places/ANXAkqHCA5r1MN_0JAWVgGyrpbkLAcjVbfGIFCtteUHIO_3tVYMUUUBXi9lBFQkklSzT7u1blra-mCr0V70LuFtIhQ4rnbEM6UFgbUU=s800-w800-h600" alt="New American">
+      <div class="card-body">
+        <div class="card-tag">New American</div>
+        <div class="card-name">Shorebreak Lodge</div>
+        <div class="card-desc">Fresh, seasonal menu with award-winning craft cocktails. 133 steps to the Atlantic Ocean. Voted 2025 Best New Restaurant. Appetizer or full-size entrée options.</div>
+        <div class="card-meta">📍 Wilmington Ave · OpenTable Diner's Choice 2024 & 2025</div>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img" src="https://lh3.googleusercontent.com/places/ANXAkqF9KO3kyAYL1qreIuUo3_K4awcBAt5pu2M6ePjwoBypbdL9ytFZLxc8jhdWnzh59RycRMUIZlXD-C1q1DEdmixlb7E80UJrREk=s800-w800-h600" alt="Italian">
+      <div class="card-body">
+        <div class="card-tag">Italian</div>
+        <div class="card-name">Sazio</div>
+        <div class="card-desc">Bold Italian coastal cuisine since 1989. Family recipes, fresh and local. Homemade pastas and desserts. A Rehoboth favorite — book well ahead for summer.</div>
+        <div class="card-meta">📍 Downtown Rehoboth · Reserve early</div>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img" src="https://lh3.googleusercontent.com/places/ANXAkqHIsCYU4lev8BOTvu90PsgmzkW-t4CMLXxuqOuX2wuK2lUb7Xd0Mddvcis7iD7_GnNqJAWnOy8UkoEeNz6AdO4NSLXndiXZtGQ=s800-w800-h600" alt="Seafood raw bar">
+      <div class="card-body">
+        <div class="card-tag">Raw Bar & Seafood</div>
+        <div class="card-name">Drift</div>
+        <div class="card-desc">Premier raw bar and seafood restaurant in an elevated dining environment. From the creators of The Pines. Totally renovated space with rave reviews.</div>
+        <div class="card-meta">📍 Downtown Rehoboth</div>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img" src="https://lh3.googleusercontent.com/place-photos/AL8-SNFmf9bP-5ZPo67ifeR4AEaCVQfzgnCC3z_icOXkIJY4mYA3gUvuZi5AFVL5HtXb3FYJq0Xmsnss8kNx5juh-r5FZn0TJdrYRxhw1h-eEtEA720QemUin_FLvDgap4yoS59qk_Nttd1QVLg_2g=s800-w800-h600" alt="Bodhi Kitchen">
+      <div class="card-body">
+        <div class="card-tag">Modern Asian</div>
+        <div class="card-name">Bodhi Kitchen</div>
+        <div class="card-desc">Innovative Asian-inspired menu riffing on Thai, Korean, Chinese, Vietnamese, and Japanese flavors. Modern take on street food. Moon gate entrance transports you. Note: 21+ establishment.</div>
+        <div class="card-meta">📍 Downtown Rehoboth · Adults only</div>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img" src="https://lh3.googleusercontent.com/place-photos/AL8-SNFu5xmF-l3wgxA7SV7h1kAnOH13-qaIb_LJIBxC9u5Ngmh7NBzqwn2qjQdD6rFWDCyjX6WSNsDi6BB9i_if8GNBHA4u1VB95FyDiMhX94_g-_xnGVaajr0Wlevvsx81C8g90tbSosXDfHLgtszrV3XTgg=s800-w800-h600" alt="Oceanfront dining">
+      <div class="card-body">
+        <div class="card-tag">Oceanfront</div>
+        <div class="card-name">Victoria's at Boardwalk Plaza</div>
+        <div class="card-desc">Fine dining overlooking the beach and boardwalk. Three-tiered dining room with Atlantic views from every table. Afternoon tea service also available. Outdoor boardwalk patio dining.</div>
+        <div class="card-meta">📍 2 Olive Ave & Boardwalk · (302) 227-0615</div>
+      </div>
+    </div>
+  </div>
+  <p style="text-align:center; margin-top:2rem; font-size:0.85rem; color:var(--coral); font-weight:500;">⚠️ Summer dinner reservations in Rehoboth fill months in advance. We strongly recommend booking immediately for June 25–28.</p>
+</section>
+
+<!-- ========== UNIQUE SIGHTS ========== -->
+<section class="section" id="sights">
+  <div class="section-header">
+    <span class="section-number">XIV</span>
+    <h2 class="section-title">Unique Rehoboth Sights & Experiences</h2>
+    <p class="section-subtitle">The things that make this town unforgettable</p>
+    <div class="section-line"></div>
+  </div>
+  <ul class="venue-list">
+    <li class="venue-item">
+      <span class="venue-num">01</span>
+      <div class="venue-info">
+        <h4>Fort Miles Museum & WWII Towers</h4>
+        <p>Former WWII military base at Cape Henlopen. Climb fire control towers, explore barracks, and learn about Delaware's coastal defense history. Guided tours available.</p>
+      </div>
+    </li>
+    <li class="venue-item">
+      <span class="venue-num">02</span>
+      <div class="venue-info">
+        <h4>Cape May–Lewes Ferry</h4>
+        <p>70-minute scenic ferry ride across the Delaware Bay to Cape May, NJ. Operates daily. Great for a day trip to Victorian Cape May or just the ride itself. Cars and walk-ons welcome.</p>
+      </div>
+    </li>
+    <li class="venue-item">
+      <span class="venue-num">03</span>
+      <div class="venue-info">
+        <h4>Rehoboth Beach Museum</h4>
+        <p>Local history exhibits in a charming setting. Lectures and walking tours of the town's historic neighborhoods.</p>
+      </div>
+    </li>
+    <li class="venue-item">
+      <span class="venue-num">04</span>
+      <div class="venue-info">
+        <h4>Goat Yoga</h4>
+        <p>Yes, really. Goat Joy offers yoga sessions with baby goats at a nearby farm. A unique, photo-worthy experience for Talia's Instagram.</p>
+        <div class="venue-detail">📍 22114 Ritter Lane, Harbeson · GoatJoy.com · (302) 542-1062</div>
+      </div>
+    </li>
+    <li class="venue-item">
+      <span class="venue-num">05</span>
+      <div class="venue-info">
+        <h4>Rehoboth Farmers Market</h4>
+        <p>Fresh foods, artisanal goods, and a relaxing picnic atmosphere. Tuesdays and Saturdays during the season at Grove Park.</p>
+      </div>
+    </li>
+    <li class="venue-item">
+      <span class="venue-num">06</span>
+      <div class="venue-info">
+        <h4>Lefty's Alley & Eats</h4>
+        <p>Bowling, arcade, and bar food — a fun rainy-day option for the whole family.</p>
+      </div>
+    </li>
+    <li class="venue-item">
+      <span class="venue-num">07</span>
+      <div class="venue-info">
+        <h4>Ghost Crab Hunts</h4>
+        <p>Evening naturalist-led crab hunts at Cape Henlopen State Park. Fun for Ari and the kids. Bring a flashlight and watch the crabs scurry across the sand.</p>
+      </div>
+    </li>
+    <li class="venue-item">
+      <span class="venue-num">08</span>
+      <div class="venue-info">
+        <h4>Sand Dollar Cruises — CycleBoat</h4>
+        <p>Delaware's only CycleBoat — it's a bike, a bar, a boat. Pedal-powered group vessel. Unique activity for a family outing.</p>
+        <div class="venue-detail">📍 sanddollarcruises.com</div>
+      </div>
+    </li>
+  </ul>
+</section>
+
+<!-- ========== PORTRAITS ========== -->
+<section class="section" id="portraits">
+  <div class="section-header">
+    <span class="section-number">XV</span>
+    <h2 class="section-title">Family Beach Portraits</h2>
+    <p class="section-subtitle">Capture three generations on the Atlantic shore</p>
+    <div class="section-line"></div>
+  </div>
+  <div class="card-grid">
+    <div class="card">
+      <img class="card-img" src="https://images.unsplash.com/photo-1511895426328-dc8714191300?w=600&q=80" alt="Family portrait">
+      <div class="card-body">
+        <div class="card-tag">Award-Winning</div>
+        <div class="card-name">Portraits In The Sand</div>
+        <div class="card-desc">Nationally award-winning Master Photographer David Koster. Specializes in family beach portraits across all Delaware beaches. Classical and contemporary styles. Extended family sessions available.</div>
+        <div class="card-meta">📍 110 White Oak Rd, Rehoboth · portraitsinthesand.com</div>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img" src="https://images.unsplash.com/photo-1476234251651-f353703a034d?w=600&q=80" alt="Beach photography">
+      <div class="card-body">
+        <div class="card-tag">Extended Families</div>
+        <div class="card-name">AnneMarie Hamant Photography</div>
+        <div class="card-desc">17+ years specializing in Delaware beach family photography. Expert with extended families and multi-generational sessions. Relaxed approach, modern and candid. Books months in advance for summer.</div>
+        <div class="card-meta">📞 annemariehamant.com · Book ASAP</div>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img" src="https://images.unsplash.com/photo-1529634597503-139d3726fed5?w=600&q=80" alt="Photography">
+      <div class="card-body">
+        <div class="card-tag">Candid & Joy</div>
+        <div class="card-name">Still Poetry Photography</div>
+        <div class="card-desc">Specializes in capturing authentic joy. Experience photographing groups up to 26 people. Sunrise and sunset sessions at Rehoboth, Dewey, and Cape Henlopen.</div>
+        <div class="card-meta">📞 stillpoetryphotography.com</div>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img" src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=600&q=80" alt="Olive and Grace">
+      <div class="card-body">
+        <div class="card-tag">Local Rehoboth</div>
+        <div class="card-name">Olive & Grace Photography / Rehoboth Beach Portrait Co.</div>
+        <div class="card-desc">Local photographers offering family, group, and special event sessions on the beach. Classic and journalistic styles. Same-day booking sometimes available.</div>
+        <div class="card-meta">📞 olive-grace.com / rehobothbeachportraitcompany.com</div>
+      </div>
+    </div>
+  </div>
+  <p style="text-align:center; margin-top:2rem; font-size:0.85rem; color:var(--coral); font-weight:500;">⚠️ Beach photographers book solid for summer — contact immediately upon confirming trip dates. Best light: sunrise or golden hour before sunset.</p>
+</section>
+
+<!-- ========== BIDEN ========== -->
+<section class="section" id="biden">
+  <div class="section-header">
+    <span class="section-number">XVI</span>
+    <h2 class="section-title">The Biden Connection</h2>
+    <p class="section-subtitle">Rehoboth Beach — formerly "The Presidential Retreat"</p>
+    <div class="section-line"></div>
+  </div>
+  <div class="highlight-box" style="background: linear-gradient(135deg, #1a2a3a, #2a3a4a);">
+    <h3>Former President Biden & Rehoboth Beach</h3>
+    <p>Joe and Jill Biden purchased their Rehoboth Beach home in the North Shores community in 2017 for $2.7 million. The six-bedroom Cape Cod-style residence at <strong style="color:var(--gold-light);">32 Far View Road</strong> served as the presidential retreat throughout Biden's term, putting Rehoboth in the international spotlight. The home is now valued at approximately $6.1 million.</p>
+    <p style="margin-top:1rem;"><strong style="color:var(--gold-light);">Where you might spot the Bidens:</strong></p>
+    <p style="margin-top:0.5rem;">
+      🚲 <strong>Gordon's Pond Trail</strong> — Their favorite bike trail. Marine One frequently landed at the Gordon's Pond parking lot.<br>
+      🍳 <strong>Egg Restaurant</strong> — Biden's go-to brunch spot on Rehoboth Avenue. He and Jill used to bike there.<br>
+      ⛪ <strong>St. Edmond Catholic Church</strong> — Biden almost always attended mass here when in town.<br>
+      🎬 <strong>Movies at Midway</strong> — Where they caught Oppenheimer during a summer visit.<br>
+      🏖️ <strong>North Shores Beach</strong> — Private community beach near their home, adjacent to Cape Henlopen State Park.
+    </p>
+    <p style="margin-top:1rem; font-style:italic; color:rgba(255,255,255,0.6);">Since leaving office in January 2025, Biden's security detail is reduced. Locals expect him to be seen more frequently at restaurants and on the trails. No guarantees, but Rehoboth remains his home away from home.</p>
+  </div>
+</section>
+
+<!-- ========== MAP ========== -->
+<section class="section" id="map">
+  <div class="section-header">
+    <span class="section-number">XVII</span>
+    <h2 class="section-title">Your Rehoboth Beach Map</h2>
+    <p class="section-subtitle">Everything within reach — most attractions are a pleasant walk from The Bellmoor</p>
+    <div class="section-line"></div>
+  </div>
+  <div class="map-container">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12437.05685!2d-75.0850!3d38.7210!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b8b9ae5a5e0c1d%3A0x2ae6c3e8e24c5b4e!2sRehoboth%20Beach%2C%20DE!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" allowfullscreen loading="lazy"></iframe>
+  </div>
+  <div class="highlight-box" style="background: var(--white); color: var(--charcoal); border: 1px solid rgba(0,0,0,0.08);">
+    <h3 style="color: var(--ocean-deep);">Walking Distances from The Bellmoor Inn</h3>
+    <p style="color: var(--slate);">
+      <strong>Rehoboth Beach & Boardwalk:</strong> 2 blocks (~3 min walk)<br>
+      <strong>Rehoboth Avenue shops:</strong> Half block (~1 min walk)<br>
+      <strong>Henlopen City Oyster House:</strong> Adjacent / next door<br>
+      <strong>Penny Lane Mall:</strong> ~3 min walk<br>
+      <strong>Rehoboth Mews / Coffee Mill:</strong> ~4 min walk<br>
+      <strong>Bandstand concerts:</strong> ~5 min walk<br>
+      <strong>Funland:</strong> ~5 min walk<br>
+      <strong>Clear Space Theatre:</strong> ~3 min walk<br>
+      <strong>Gordon's Pond Trail (entrance):</strong> ~15 min walk or 5 min drive<br>
+      <strong>Dewey Beach water sports:</strong> ~5 min drive<br>
+      <strong>Fisherman's Wharf (Lewes):</strong> ~15 min drive<br>
+      <strong>Cape Henlopen State Park:</strong> ~10 min drive<br>
+      <strong>Tanger Outlets:</strong> ~5 min drive<br>
+    </p>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
+  <div class="footer-title">Seshasai Family — Summer 2026</div>
+  <p>Rehoboth Beach, Delaware &nbsp;·&nbsp; June 25–28, 2026 &nbsp;·&nbsp; The Bellmoor Inn & Spa</p>
+  <div style="width:40px; height:1px; background:var(--gold); margin:1.5rem auto;"></div>
+  <p style="font-size:0.7rem; margin-top:1rem;">This concierge dossier was prepared exclusively for the Seshasai family. Reservations, bookings, and availability should be confirmed directly with each establishment. Summer 2026 schedules may vary.</p>
 </footer>
 
-<!-- ===== SCROLL SPY JS ===== -->
-<script>
-// Highlight active nav link on scroll
-const sections = document.querySelectorAll('.hotel-section, #summary');
-const navLinks = document.querySelectorAll('.nav-link');
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      navLinks.forEach(link => link.classList.remove('active'));
-      const id = entry.target.id;
-      const activeLink = document.querySelector(`.nav-link[href="#${id}"]`);
-      if (activeLink) activeLink.classList.add('active');
-    }
-  });
-}, { rootMargin: '-80px 0px -60% 0px', threshold: 0 });
-sections.forEach(s => observer.observe(s));
-</script>
 </body>
 </html>
