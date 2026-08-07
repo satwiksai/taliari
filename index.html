@@ -128,7 +128,6 @@
   @keyframes ctapulse{0%,100%{box-shadow:0 0 0 0 rgba(235,207,71,0)} 50%{box-shadow:0 0 0 6px rgba(235,207,71,.4); background:#EBCF47; border-color:#EBCF47; color:#1B1E22}}
   @media (prefers-reduced-motion: reduce){ .cta, .next-turn:not(:disabled), .tm-book:not(:disabled){animation:none; box-shadow:0 0 0 3px rgba(235,207,71,.5)} }
 
-  /* move-in likelihood meter */
   .meter{background:var(--bcn-card); border:1px solid var(--bcn-line); border-radius:10px; padding:10px 12px; margin-bottom:10px}
   .meter .mrow{display:flex; align-items:baseline; gap:8px}
   .meter .ml{font-size:10px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:var(--bcn-mut)}
@@ -170,7 +169,6 @@
   .facts-label{font-size:9.5px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:var(--bcn-mut); margin:12px 0 4px}
   @media (prefers-reduced-motion: reduce){ .lc-row.flip{animation:none} }
 
-  /* family hub view (mirrors the Family Hub artifact) */
   .hub{display:none; --shadow-h:0 1px 3px rgba(44,47,52,.06), 0 10px 28px -18px rgba(44,47,52,.18)}
   .hub .backbtn{background:transparent; border:1px solid var(--line-blue); color:var(--blue-deep); border-radius:999px; font-family:var(--font-ui); font-weight:600; font-size:12px; padding:6px 14px; cursor:pointer; margin-bottom:12px}
   .hub .backbtn:hover{border-color:var(--blue)}
@@ -268,7 +266,6 @@
   .hub .hpresence{font-size:10.5px; color:var(--muted); margin-top:8px; display:flex; align-items:center; gap:6px}
   .hub .hpresence .dot{width:7px; height:7px; border-radius:50%; background:var(--green)}
 
-  /* tour booking modal */
   .pane{transition:filter .5s ease}
   .pane.blurred{filter:blur(7px); pointer-events:none; user-select:none}
   .im-body{font-size:13px; line-height:1.65; color:var(--body-c); margin:12px 0 16px}
@@ -309,7 +306,6 @@
   @keyframes obglow{0%{box-shadow:0 0 0 3px rgba(31,89,66,.4)} 100%{box-shadow:none}}
   @media (prefers-reduced-motion: reduce){ .outbound.flash .email-card{animation:none} }
 
-  /* provider intro email card */
   .email-card{background:var(--card); border:1px solid var(--line); border-radius:12px; margin:10px 0; overflow:hidden; font-size:12.5px}
   .email-card .eh{background:var(--band-soft); padding:9px 13px; border-bottom:1px solid var(--line-blue)}
   .email-card .eh div{font-size:10.5px; color:var(--muted); line-height:1.6}
@@ -424,8 +420,6 @@
   .trail .tl{font-size:9.5px; letter-spacing:.07em; text-transform:uppercase; color:var(--spine-mut); margin-bottom:5px}
   .trail-row{display:flex; gap:8px; font-size:10.5px; font-family:var(--font-mono); padding:3px 0; align-items:baseline}
   .insp-note{font-size:10.5px; color:var(--spine-mut); margin-top:8px; line-height:1.45}
-
-/* ================= Fabric additions ================= */
 
 /* section nav */
 .nav{display:flex; gap:6px; padding:8px 16px; background:#22252A; border-bottom:1px solid var(--spine-line); overflow-x:auto}
@@ -577,7 +571,7 @@
   <!-- LEFT · patient -->
   <div class="pane fam">
     <div class="fam-head">
-      <span class="fam-logo" id="famLogo"><b>fabric</b></span>
+      <span class="fam-logo" id="famLogo"><b>company</b></span>
       <span class="fam-tag" id="famTag">AI INTAKE · IDLE</span>
       <span style="margin-left:auto; font-size:11px; color:var(--muted)" id="famWho">Maya Torres · via Northlake Health portal</span>
     </div>
@@ -606,7 +600,7 @@
       <h3>The record <small>· claims, resolved live</small><button class="spine-min" onclick="toggleSpine()" title="Collapse to give the patient pane room">⟨</button></h3>
       <div class="xref" id="xrefCard">
         <b>IDENTITY CONFIRMED</b> · portal sign-in matched to this chart<br>
-        northlake_sso u_44802 ⇄ fabric chart mt_5521 · session s_20412
+        northlake_sso u_44802 ⇄ chart mt_5521 · session s_20412
         <div class="env">match_method: SSO_SUBJECT + DOB · score 0.98</div>
         <div class="dupe">✓ No duplicate chart created · history intact</div>
       </div>
@@ -647,7 +641,7 @@
       <li><b>The record stayed in use after the visit.</b> The automated follow-up produced an outcome label for every model in the chain, and the membership offer was assembled from her existing claims, each with its source shown.</li>
     </ul>
     <p class="end-line" style="margin-top:2px">Two journeys run on the same machine — switch <b>Journey</b> in the top bar: the known patient (record continuity, human-confirmed writes) and the net-new DTC visitor (guest session, trust-sequenced asks, identity at prescribing, consent as claims).</p>
-    <p class="end-build"><b>I've built both parts of this before.</b> The claim record with source tracking is live at my current company as a read-only brief inside existing tools; the AI gateway under it runs in production today. The next tabs cover how the same components apply at Fabric.</p>
+    <p class="end-build"><b>I've built both parts of this before.</b> The claim record with source tracking is live at my current company as a read-only brief inside existing tools; the AI gateway under it runs in production today. The next tabs cover how the same components apply</p>
     <div class="end-actions">
       <button class="endbtn ghost" onclick="closeEnd()">Back to the demo</button>
       <button class="endbtn" onclick="closeEnd(); showView('record')">Explore the layers →</button>
@@ -704,7 +698,7 @@
   <div class="band plain">
     <div class="bh">Append-only, tombstones, and why that matters for audit</div>
     <p>Nothing is ever deleted. A correction is a new claim; a retraction is a tombstone that points at what it retracts. That gives us three things clinical AI needs: <b>replayability</b> — we can reconstruct exactly what any surface served at any moment, what the model saw, and what the clinician saw, in order; <b>audit response</b> — an AI-review board's evidence package is a query over this data rather than a manual reconstruction; and <b>training data at no extra cost</b> — every clinician confirm, edit and override is a graded label against the producer that made the claim.</p>
-    <div class="prior-card"><span class="prior">⬡ prior build</span>&nbsp; I've shipped this record for a different domain: identity resolution across a portfolio of systems, claims with receipts, resolver with floors — delivered <b>read-only into the surfaces teams already used</b>, so adoption cost nothing. The first slice was exactly what the right pane of the demo shows: a briefing with a receipt behind every value. The same sequencing — read-only brief first, writes later — applies at Fabric and avoids touching systems that already work.</div>
+    <div class="prior-card"><span class="prior">⬡ prior build</span>&nbsp; I've shipped this record for a different domain: identity resolution across a portfolio of systems, claims with receipts, resolver with floors — delivered <b>read-only into the surfaces teams already used</b>, so adoption cost nothing. The first slice was exactly what the right pane of the demo shows: a briefing with a receipt behind every value. The same sequencing — read-only brief first, writes later — applies and avoids touching systems that already work.</div>
   </div>
 
   <div class="band">
@@ -742,7 +736,7 @@
       <div class="tile"><h5>The record is the memory</h5><p>Context is assembled per turn from resolved claims — no hidden conversation state, no model "remembering" wrong. Every token the model saw is reconstructable, which is what makes incidents debuggable and audits answerable.</p></div>
       <div class="tile"><h5>Schema-constrained outputs</h5><p>Models emit claims against the field catalog and are validated before anything lands. Free text lives in evidence spans, in the patient's own words. An invalid or fabricated output fails validation and never reaches the chart.</p></div>
     </div>
-    <p>This is my answer to "how do you make an LLM safe at clinical stakes": the safety guarantees come from the surrounding system — deterministic screens, floors, validation, gated dispositions — not from the model itself. Fabric's decade of protocol encounters supplies those deterministic components, which is an asset competitors don't have.</p>
+    <p>This is my answer to "how do you make an LLM safe at clinical stakes": the safety guarantees come from the surrounding system — deterministic screens, floors, validation, gated dispositions — not from the model itself. Our decade of protocol encounters supplies those deterministic components, which is an asset competitors don't have.</p>
   </div>
 
   <div class="band plain">
@@ -750,7 +744,7 @@
     <div class="bsub">a model or prompt change ships exactly like code ships: through gates</div>
     <table class="ttable">
       <tr><th>Layer</th><th>What it is</th><th>Gate</th></tr>
-      <tr><td><b>Golden sets</b></td><td>Mined from historical protocol encounters — a decade of rules-based intakes is a large labeled corpus specific to Fabric. De-identified, versioned, owned like code.</td><td>CI: no regression on safety-critical slices.</td></tr>
+      <tr><td><b>Golden sets</b></td><td>Mined from historical protocol encounters — a decade of rules-based intakes is a large labeled corpus specific to us. De-identified, versioned, owned like code.</td><td>CI: no regression on safety-critical slices.</td></tr>
       <tr><td><b>Clinician rubrics</b></td><td>Clinicians author the grading criteria (completeness, pertinent negatives, escalation correctness); model-graded at scale, clinician-audited on samples. SMEs stay load-bearing here permanently.</td><td>Release: rubric scores at or above current champion.</td></tr>
       <tr><td><b>Shadow mode</b></td><td>AI Intake runs silently alongside live protocol intakes; diffs scored nightly against the rules engine as the baseline, with results published internally.</td><td>Expansion: win-rate threshold per complaint family before AI takes real traffic for it.</td></tr>
       <tr><td><b>Online monitors</b></td><td>Escalation precision/recall, contradiction rate vs the record, re-ask rate, completion rate, clinician edit rate per producer — live, per model version, from the audit stream.</td><td>Runtime: breach pages a human and can trip the killswitch (tab ④).</td></tr>
@@ -773,8 +767,8 @@
 <div class="page" id="view-gateway">
 <div class="pg-in">
   <div class="pg-kicker">④ Under everything</div>
-  <div class="pg-h1">One door · the Fabric AI Gateway</div>
-  <p class="pg-lede">Every LLM call in the company — intake, documentation, coding, internal tools, engineers' coding agents — goes through <b>one OpenAI-compatible endpoint</b>, and policy is enforced at the door: budgets, rate limits, PHI, model allowlists, an in-flight killswitch, and a 7-year audit record for every request <i>and every admin action</i>. <b>This is not a proposal.</b> I designed and shipped this system; the gateway and its admin plane run in production at my current company today, with an agents plane behind it in dev. For Fabric it's an adaptation, not an invention.</p>
+  <div class="pg-h1">One door · the AI Gateway</div>
+  <p class="pg-lede">Every LLM call in the company — intake, documentation, coding, internal tools, engineers' coding agents — goes through <b>one OpenAI-compatible endpoint</b>, and policy is enforced at the door: budgets, rate limits, PHI, model allowlists, an in-flight killswitch, and a 7-year audit record for every request <i>and every admin action</i>. <b>This is not a proposal.</b> I designed and shipped this system; the gateway and its admin plane run in production at my current company today, with an agents plane behind it in dev. For us it's an adaptation, not an invention.</p>
 
   <div class="band plain">
     <div class="bh">The policy pipeline</div>
@@ -800,7 +794,7 @@
   <div class="band">
     <div class="bh">Tenancy · where clinical governance attaches</div>
     <table class="ttable">
-      <tr><th>Level</th><th>At Fabric</th><th>What hangs on it</th></tr>
+      <tr><th>Level</th><th>At the Company</th><th>What hangs on it</th></tr>
       <tr><td><b>Service line</b></td><td>A clinical or business area — AI Intake, documentation, RCM, internal eng</td><td>Budget, rate limit, killswitch, model allowlist</td></tr>
       <tr><td><b>Use case</b></td><td>One approved purpose within it — e.g. "chronic-cough intake, beta"</td><td>Most policy: PHI mode, fallback chain, allowlists, <b>the attached eval artifact and approval record</b> — the unit an AI-review board approves is the unit the gateway enforces</td></tr>
       <tr><td><b>Key</b></td><td>One credential, one purpose</td><td>Expiry, inference caps, capability flags; hashed at rest, fail-closed</td></tr>
@@ -809,7 +803,7 @@
 
   <div class="band plain">
     <div class="bh">Agents inherit governance from the same door</div>
-    <p>One idea applied twice: policy at the door for model traffic, and <b>the same door under every agent</b>. Infrastructure denies agents direct model access — their execution role can't invoke a model except through the gateway, each deploy gets a fresh key scoped to its own use case, and every token lands on its own budget line. An agent can't overspend, can't touch a disallowed model, can't call an unattached tool, and can be killed mid-stream — <b>with zero policy code written by the team that built it.</b> As Fabric's engineers reshape around agentic development, this is what keeps the inflection safe: the agents building the product live under the same governance as the product.</p>
+    <p>One idea applied twice: policy at the door for model traffic, and <b>the same door under every agent</b>. Infrastructure denies agents direct model access — their execution role can't invoke a model except through the gateway, each deploy gets a fresh key scoped to its own use case, and every token lands on its own budget line. An agent can't overspend, can't touch a disallowed model, can't call an unattached tool, and can be killed mid-stream — <b>with zero policy code written by the team that built it.</b> As our engineers reshape around agentic development, this is what keeps the inflection safe: the agents building the product live under the same governance as the product.</p>
     <div class="grid2">
       <div class="tile"><h5>Self-service by design</h5><p>Keys, models, providers, agents and tools are GUI actions on runtime data — no infra tickets. Engineers connect their coding agents through the same door with copy-paste configs. Clinical-ops staff get a plain-language studio for drafting agents, with honest failure modes and explicit deploys — nothing fakes success.</p></div>
       <div class="tile"><h5>The story I'd tell a review board</h5><p>The platform's policy applies to the platform itself: in my current deployment, our own drafting model's traffic was once PII-blocked by the gateway, root-caused from the audit log in minutes, fixed, and verified the same day. The same enforcement applied to our internal traffic as to any other caller — a concrete example of policy running as a system rather than a document.</p></div>
@@ -819,11 +813,11 @@
   <div class="band">
     <div class="bh">Proven vs. adapted</div>
     <table class="ttable">
-      <tr><th>Capability</th><th>Status in my current deployment</th><th>For Fabric</th></tr>
+      <tr><th>Capability</th><th>Status in my current deployment</th><th>For Us</th></tr>
       <tr><td>Model gateway + full policy pipeline</td><td class="lead">Production</td><td>Adapt PHI posture to HIPAA/BAA lanes; point existing beta traffic at it in month one (tab ⑤)</td></tr>
       <tr><td>Admin plane, SSO, audit UI</td><td class="lead">Production</td><td>Becomes the shared console across acquired stacks — one place to see every model call in the company</td></tr>
       <tr><td>Agents plane · lifecycle, per-agent keys, run ledger</td><td class="lag">Dev · promotion is rollout, not build</td><td>Hosts documentation and NBA agents as they arrive</td></tr>
-      <tr><td>Eval gates wired to use-case rows</td><td class="lag">Designed</td><td>Build here first — this is the Fabric-specific piece, and it's what makes approvals enforceable</td></tr>
+      <tr><td>Eval gates wired to use-case rows</td><td class="lag">Designed</td><td>Build here first — this is the company-specific piece, and it's what makes approvals enforceable</td></tr>
     </table>
     <p style="font-size:12.5px; color:var(--muted)">Build-vs-buy note: gateway products exist and are worth evaluating honestly. My bar: does it give us fail-closed PHI enforcement, a mid-stream killswitch, eval-artifact-per-use-case, and a 7-year audit we own? If a vendor clears that bar faster than adapting a system I've already built, we buy. My expectation is a thin build on open standards — and the OpenAI-compatible surface keeps the decision reversible either way.</p>
   </div>
@@ -843,7 +837,7 @@
       <div class="tile"><h5>Intent &amp; engagement intelligence</h5><p>The interaction log as first-class data: sessions, channels, response times, follow-up behavior, conversion moments, drop-offs. Producers: cadence and channel models, engagement scorers. Consumers: acquisition, activation, follow-up timing, membership conversion, retention.</p></div>
     </div>
     <p>The combination matters in both directions. Clinical claims give engagement a legitimate trigger — the follow-up in the demo fired because an episode was unresolved, not because a marketing calendar said so, which is why patients experience it as care rather than marketing. Engagement claims make clinical outreach effective — knowing Maya responds in-app in the evenings is the difference between a follow-up she sees and one she doesn't. Both kinds of claims use the same envelope, audit, and gateway, so growth automation runs under the same governance as clinical AI: every proactive touch traces to a specific claim, and every claim shows its source.</p>
-    <div class="prior-card"><span class="prior">⬡ prior build</span>&nbsp; This two-hemisphere pattern is literally what my prior record build did: care-profile claims on one side, engagement signals (channel response, cadence, life-event triggers) on the other, one resolver over both — and the flagship demo was a <b>dormant relationship reactivated by a signal in the record</b>. The demo in tab ① ends the same way deliberately. The relationship-automation side is something I have already shipped; at Fabric it would be combined with the clinical side.</div>
+    <div class="prior-card"><span class="prior">⬡ prior build</span>&nbsp; This two-hemisphere pattern is literally what my prior record build did: care-profile claims on one side, engagement signals (channel response, cadence, life-event triggers) on the other, one resolver over both — and the flagship demo was a <b>dormant relationship reactivated by a signal in the record</b>. The demo in tab ① ends the same way deliberately. The relationship-automation side is something I have already shipped; here it would be combined with the clinical side.</div>
   </div>
 
   <div class="band">
@@ -871,7 +865,7 @@
 
   <div class="band dark">
     <div class="bh">Right to win · which assets compound</div>
-    <p>Durable advantage comes from assets that improve with use and can't be purchased directly. Fabric has four, and this architecture connects them:</p>
+    <p>Durable advantage comes from assets that improve with use and can't be purchased directly. We have four, and this architecture connects them:</p>
     <p><b>1 · The protocol corpus.</b> A decade of clinically-safe encounters is simultaneously the safety harness (deterministic screens), the eval baseline (the system to beat, honestly), and the labeled dataset (golden sets). AI-intake startups have models; they do not have this, and they cannot generate it retroactively.</p>
     <p><b>2 · The record.</b> Every encounter deepens it, and a deeper record improves the next encounter, follow-up and conversion. That is a per-patient switching cost that grows with tenure, and it is built from verifiable data rather than brand affinity.</p>
     <p><b>3 · Governance as a differentiator in sales.</b> Health-system AI-review boards are a hard gate for most vendors; with the use-case registry, eval artifacts, killswitch and 7-year replay, we can answer their requirements with a live demonstration. B2B trust and DTC growth run on the same infrastructure.</p>
@@ -884,7 +878,7 @@
 <div class="pg-in">
   <div class="pg-kicker">⑥ Leading the function</div>
   <div class="pg-h1">30 / 60 / 90 · the org · the commitments</div>
-  <p class="pg-lede">Tabs ①–⑤ describe where the technology goes. This tab covers execution, grounded in the current reality: an early-beta AI product, a portfolio of acquired stacks, <b>PlushCare roughly doubling the engineering org</b>, and teams whose views I haven't heard yet. The plan front-loads in-person time and quick wins, defers structural moves until they're informed, and requires every consolidation item to map to a growth opportunity.</p>
+  <p class="pg-lede">Tabs ①–⑤ describe where the technology goes. This tab covers execution, grounded in the current reality: an early-beta AI product, a portfolio of acquired stacks, <b>NewCo roughly doubling the engineering org</b>, and teams whose views I haven't heard yet. The plan front-loads in-person time and quick wins, defers structural moves until they're informed, and requires every consolidation item to map to a growth opportunity.</p>
 
   <div class="band">
     <div class="bh">30 / 60 / 90 — tactical</div>
@@ -894,14 +888,14 @@
       <h6>In the rooms, in person — and a few visible fixes</h6>
       <p><b>People.</b> On-site with every team, on their turf — not a roadshow of all-hands but working sessions: sit clinician review shifts, read the protocol engine's source with its authors, pair on the AI Intake beta. Skip-levels with senior ICs and specifically with <b>long-tenured people</b> — they hold the load-bearing context, and I want an early, honest read on retention: who's a flight risk, what scope/growth/comp would keep them, and a quiet retention plan for the top of that list <i>before</i> any org conversation starts.</p>
       <p><b>Quick hands-on wins.</b> Two or three small, visible, finished things in the first month: push back on at least one requirement that's inflating scope (a new CTO who says "no, and here's the smaller version" early establishes that requirements get scrutiny); pick one long-standing tech-debt irritant the teams name — build times, flaky CI, an on-call pain — and fix it; unblock one decision that has been circling. <b>Key hires:</b> searches take 90+ days, so the first reqs open in week two — my starting bets are a data-platform lead and an eval/AI-quality lead, revised as I learn.</p>
-      <p><b>PlushCare, part one.</b> The acquisition roughly doubles engineering, so a real slice of the first 60 days is the mapping: skills, stacks, ownership, on-call reality, who their load-bearing people are. Month one is inventory and relationships — no mapping decisions yet, stated openly so nobody reorgs themselves preemptively.</p>
+      <p><b>NewCo, part one.</b> The acquisition roughly doubles engineering, so a real slice of the first 60 days is the mapping: skills, stacks, ownership, on-call reality, who their load-bearing people are. Month one is inventory and relationships — no mapping decisions yet, stated openly so nobody reorgs themselves preemptively.</p>
       <p><b>Measurement pilot.</b> Stand the eval harness over existing AI Intake beta traffic — replay, score, publish the first scorecard. Zero product change, instant credibility, and the baseline for everything after. <b>Leave alone:</b> the protocol engine and clinician review workflow. <b>Intervene immediately only if</b> I find ungoverned LLM traffic or PHI side doors — that's a week-one gateway fix, not a memo.</p>
     </div></div>
 
     <div class="phase"><div class="pnum">60<small>budget · org view · AI investment</small></div><div>
       <h6>Where the money goes, where the teams go, and the AI-native PDLC</h6>
       <p><b>Budget.</b> Full view of run-rate: cloud and vendor spend, model spend (the gateway makes it visible per use case from day one), headcount plan by team, and the acquired entities' cost bases. Goal: find the 10–15% that funds the AI investment below without a new ask.</p>
-      <p><b>Near-term org optimization — a view, not yet an announcement.</b> Cross-team map of duplicated effort across acquired stacks, product-specific evolution opportunities (what each product line needs next and whether its current team shape can deliver it), and the draft target structure. <b>PlushCare, part two:</b> a preliminary recommendation on if/how their teams map across the broader org — including the honest option that some deliberately don't merge yet.</p>
+      <p><b>Near-term org optimization — a view, not yet an announcement.</b> Cross-team map of duplicated effort across acquired stacks, product-specific evolution opportunities (what each product line needs next and whether its current team shape can deliver it), and the draft target structure. <b>NewCo, part two:</b> a preliminary recommendation on if/how their teams map across the broader org — including the honest option that some deliberately don't merge yet.</p>
       <p><b>AI investment, concretely.</b> Resource the two platform teams that make everything else compound: a <b>Data Platform team</b> (the record, pipelines, eval datasets) and an <b>AI Gateway team</b> (the door, policy, eval wiring). Seed <b>agentic builds inside product teams</b> — agent capacity through the gateway per team, not a central AI silo that becomes a bottleneck.</p>
       <p><b>AI-native PDLC end to end — by 60, deliberately not 30.</b> Spec → agent-implemented → eval-gated → human-reviewed, adopted team by team starting with two volunteers. It takes time for a team to genuinely change its habits; forcing it in month one produces surface-level adoption without real change. By day 60 the first teams run it for real and publish what changed.</p>
       <p><b>Product pilots continue:</b> gateway v0 in front of existing LLM traffic (two-line client change), shadow mode on one high-volume complaint family, read-only intake brief with volunteer clinicians.</p>
@@ -911,7 +905,7 @@
       <h6>The long-term roadmap, agreed in writing</h6>
       <p><b>Stakeholder alignment.</b> Across business partners — clinical leadership, growth, finance, the health-system customer teams — on the longer-term roadmap: <b>build / buy / integrate</b> calls per major capability, tech-stack investments, and the consolidation sequence. Socialized 1:1 before any big meeting; decision memos with the options we didn't pick.</p>
       <p><b>Growth-mapped consolidation memo.</b> Every tech-debt and consolidation item justified by the growth opportunity or risk it unlocks — revenue, conversion, safety, velocity — with the explicit rule that anything we can't map, we don't do yet (detail below).</p>
-      <p><b>Org announced with the strategy</b> — structure, the PlushCare mapping decision, and retention moves executed together, so people hear decisions directly rather than through rumor. Eval gates land in CI; governance package v1 goes through a real customer review board; board readout: scorecard, risk register, year-one commitments with leading indicators.</p>
+      <p><b>Org announced with the strategy</b> — structure, the NewCo mapping decision, and retention moves executed together, so people hear decisions directly rather than through rumor. Eval gates land in CI; governance package v1 goes through a real customer review board; board readout: scorecard, risk register, year-one commitments with leading indicators.</p>
     </div></div>
   </div>
 
@@ -977,7 +971,7 @@
   <div class="band dark">
     <div class="bh">Top risks I'd flag to the exec team and board · first 90 days</div>
     <div class="risk"><span class="rn">1</span><span><b>A safety incident in beta before eval coverage catches up.</b> Highest severity. <span class="mit">Mitigation: harness constraints (protocol-owned screens, floors) land before traffic grows; killswitch verified in a live drill within the first 60 days.</span></span></div>
-    <div class="risk"><span class="rn">2</span><span><b>Integration drag from doubling the org</b> — the PlushCare mapping done too fast (churn, attrition) or too slow (two companies forever). <span class="mit">Mitigation: explicit two-phase mapping with dates; retention plan for load-bearing people on both sides before structure talk; some teams deliberately not merged yet.</span></span></div>
+    <div class="risk"><span class="rn">2</span><span><b>Integration drag from doubling the org</b> — the NewCo mapping done too fast (churn, attrition) or too slow (two companies forever). <span class="mit">Mitigation: explicit two-phase mapping with dates; retention plan for load-bearing people on both sides before structure talk; some teams deliberately not merged yet.</span></span></div>
     <div class="risk"><span class="rn">3</span><span><b>Ungoverned AI sprawl across acquired stacks</b> — model calls and PHI paths nobody centrally sees. <span class="mit">Mitigation: gateway-first integration; a standing inventory; killswitch scope per stack.</span></span></div>
     <div class="risk"><span class="rn">4</span><span><b>Model-vendor concentration</b> — pricing, deprecation, or terms shifting under a clinical product. <span class="mit">Mitigation: multi-provider routing with proven fallbacks; the on-prem/open-weights lane kept warm; annual bake-offs on our evals.</span></span></div>
     <div class="risk"><span class="rn">5</span><span><b>Clinician trust breaks once and doesn't come back</b> — one confidently-wrong brief can poison adoption. <span class="mit">Mitigation: receipts on every value, hints labeled as hints, edit-rate tracked per producer and reviewed with clinical leadership monthly.</span></span></div>
@@ -986,7 +980,7 @@
   </div>
 
   <div class="pg-foot">
-    <span>Prepared as a working session · Fabric CTO conversation</span>
+    <span>Prepared as a working session · CTO conversation</span>
     <span>Demo, record, stack, gateway, brain and plan make one argument: durable advantage comes from the record, the harness, the evals and the gateway.</span>
   </div>
 </div>
@@ -1007,7 +1001,7 @@ function seed(){
     claims = [
       { id:'c_h1', field:'asthma_hx', label:'Asthma hx', value:'Mild intermittent · dx 2019', claimClass:'REPORTED', source:'ehr·ccda_import', confidence:0.92,
         observedAt:'2019-11-04', recordedAt:'2025-12-02', evidenceRef:'ehr://ccda/mt_5521#problem_list', vis:['clinician','patient'],
-        why:'REPORTED, not STATED: it arrived by document import, nobody at Fabric heard the patient say it. The class tells the clinician exactly how much to lean on it.' },
+        why:'REPORTED, not STATED: it arrived by document import, nobody at our company heard the patient say it. The class tells the clinician exactly how much to lean on it.' },
       { id:'c_h2', field:'allergy', label:'Allergy', value:'Penicillin (self-report 2019)', claimClass:'STATED', source:'intake·s_0187', confidence:0.88,
         observedAt:'2019-11-04', recordedAt:'2019-11-04', evidenceRef:'intake://s_0187#allergies', vis:['clinician','patient','rcm'],
         why:'a seven-year-old self-report, still serving because nothing better ever arrived. Watch what it takes to change it.' },
@@ -1042,7 +1036,7 @@ function seed(){
     document.getElementById('famWho').textContent='Maya Torres · via Northlake Health portal';
     document.getElementById('xrefCard').innerHTML =
       '<b>IDENTITY CONFIRMED</b> · portal sign-in matched to this chart<br>'
-      + 'northlake_sso u_44802 ⇄ fabric chart mt_5521 · session s_20412'
+      + 'northlake_sso u_44802 ⇄ chart mt_5521 · session s_20412'
       + '<div class="env">match_method: SSO_SUBJECT + DOB · score 0.98</div>'
       + '<div class="dupe">✓ No duplicate chart created · history intact</div>';
     document.getElementById('famHist').innerHTML = "<b>Known patient.</b> Async UTI visit <b>8 months ago</b>, resolved same night. Asthma history imported from her health system's record. All of it is in one chart.";
@@ -1091,7 +1085,7 @@ function startIntro(){
     document.getElementById('introCard').innerHTML =
       '<div class="tm-eyebrow">The story so far</div>'
       + '<div class="tm-name">There is no story yet</div>'
-      + '<div class="im-body">Riley Kim, 27, has never heard of Fabric. At <b>11:03 PM</b> she searches <i>\u201cuti treatment online tonight\u201d</i> and taps an ad.<br><br>Right now she is an ad click with a symptom: no chart, no account, and <b>no reason to trust us yet</b>. Information she isn\u2019t willing to give can\u2019t be demanded — it has to be earned, one justified ask at a time.<br><br>This is what the clinician\u2019s queue looks like: nothing.</div>'
+      + '<div class="im-body">Riley Kim, 27, has never heard of our company. At <b>11:03 PM</b> she searches <i>\u201cuti treatment online tonight\u201d</i> and taps an ad.<br><br>Right now she is an ad click with a symptom: no chart, no account, and <b>no reason to trust us yet</b>. Information she isn\u2019t willing to give can\u2019t be demanded — it has to be earned, one justified ask at a time.<br><br>This is what the clinician\u2019s queue looks like: nothing.</div>'
       + '<button class="tm-book" onclick="introNext()">Next →</button>';
   }
   document.getElementById('introModal').classList.add('show');
@@ -1110,7 +1104,7 @@ function showSignalModal(){
     document.getElementById('introCard').innerHTML =
       '<div class="tm-eyebrow">⚡ Incoming session</div>'
       + '<div class="tm-name">A new session starts</div>'
-      + '<div class="im-body"><b>9:42 PM:</b> Maya opens Fabric from her Northlake portal and taps <b>Start a visit</b>. The sign-in matches her chart — no forms, no duplicate chart, eight months of history intact.<br><br>What she can\u2019t see: everything she types next runs through the harness. <b>Protocols first</b> where one matches, <b>AI for breadth</b> where none does, and a deterministic <b>red-flag screen armed on every turn</b>. The clinician stays the decision-maker throughout.</div>'
+      + '<div class="im-body"><b>9:42 PM:</b> Maya opens our app from her Northlake portal and taps <b>Start a visit</b>. The sign-in matches her chart — no forms, no duplicate chart, eight months of history intact.<br><br>What she can\u2019t see: everything she types next runs through the harness. <b>Protocols first</b> where one matches, <b>AI for breadth</b> where none does, and a deterministic <b>red-flag screen armed on every turn</b>. The clinician stays the decision-maker throughout.</div>'
       + '<button class="tm-book" onclick="introDone()">OK</button>';
   } else {
     document.getElementById('introCard').innerHTML =
@@ -1220,7 +1214,7 @@ const TURNS_KNOWN = [
     }},
   { sp:'adv', who:'AI', sms:true, divider:'⏱ Three weeks later · 6:41 PM — triggered from the record, not scheduled by staff',
     preLabel:'▶ Three weeks later…',
-    text:"Hi Maya — it's Fabric. Dr. Okafor asked us to check in: how's the cough three weeks out? Any tightness on the stairs?",
+    text:"Hi Maya — it's us. Dr. Okafor asked us to check in: how's the cough three weeks out? Any tightness on the stairs?",
     fx: () => {
       addEdge('FOLLOWUP_FIRED', 'trigger: unresolved episode + elapsed time · rule f_22, clinician-sponsored');
       document.getElementById('callHead').innerHTML='⏱ Proactive follow-up · fired from the record';
@@ -1234,8 +1228,8 @@ const TURNS_KNOWN = [
         why:'the outcome join: this one claim provides a training label for the whole chain — router, screen, extractor, disposition, follow-up timing — collected during normal care, with no separate labeling work.' });
       addEdge('OUTCOME_JOINED', 'every producer in this episode just got graded');
     }},
-  { sp:'adv', who:'AI', sms:true, text:"That's great news — I'll note it for Dr. Okafor. One more thing, zero pressure: you've used Fabric twice now, and both times we already had your history, so you never started over. Fabric Care makes that permanent — same-night visits, refills and follow-ups handled proactively. Want to see what it would look like for you?",
-    extra:'<span class="callnow cta" onclick="openMembership()">💙 See my Fabric Care plan</span>',
+  { sp:'adv', who:'AI', sms:true, text:"That's great news — I'll note it for Dr. Okafor. One more thing, zero pressure: you've used us twice now, and both times we already had your history, so you never started over. Our Care makes that permanent — same-night visits, refills and follow-ups handled proactively. Want to see what it would look like for you?",
+    extra:'<span class="callnow cta" onclick="openMembership()">💙 See my Care plan</span>',
     fx: () => {
       addEdge('CONVERSION_MOMENT', 'offer timed after a positive outcome · assembled from her claims');
       const pb=document.getElementById('popbar'); pb.textContent='💙 Membership offer surfaced · assembled from her record';
@@ -1304,7 +1298,7 @@ const TURNS_FRESH = [
       addEdge('CHART_CREATED', 'guest s_31008 → chart nk_8102 · claims merged');
       document.getElementById('xrefCard').innerHTML =
         '<b>IDENTITY VERIFIED</b> · guest session became a chart<br>'
-        + 'guest s_31008 → fabric chart nk_8102 · claims merged'
+        + 'guest s_31008 → chart nk_8102 · claims merged'
         + '<div class="env">verified: name + DOB · pharmacy: Walgreens Damen</div>'
         + '<div class="dupe">✓ Nothing re-asked · attribution preserved across the merge</div>';
       document.getElementById('ffCard').innerHTML = '<div class="nm">Riley Kim <span style="font-weight:400; color:var(--bcn-mut)">· 27 · Chicago, IL</span></div>'
@@ -1341,8 +1335,8 @@ const TURNS_FRESH = [
         why:'the outcome join, now reaching all the way back to the ad click: this claim grades the clinical chain and the acquisition channel in the same query.' });
       addEdge('OUTCOME_JOINED', 'clinical chain graded · channel attribution graded');
     }},
-  { sp:'adv', who:'AI', sms:true, text:"Glad to hear it — that's noted for your chart. One option, entirely yours: right now your record covers just this visit. If you keep it, you skip everything you've already answered next time, and your sulfa allergy travels with you. Fabric Care adds same-night visits and follow-ups like this one, year-round. Either way, no marketing — that's on your record too.",
-    extra:'<span class="callnow cta" onclick="openMembership()">💾 Keep my record · see Fabric Care</span>',
+  { sp:'adv', who:'AI', sms:true, text:"Glad to hear it — that's noted for your chart. One option, entirely yours: right now your record covers just this visit. If you keep it, you skip everything you've already answered next time, and your sulfa allergy travels with you. Our Care adds same-night visits and follow-ups like this one, year-round. Either way, no marketing — that's on your record too.",
+    extra:'<span class="callnow cta" onclick="openMembership()">💾 Keep my record · see Our Care</span>',
     fx: () => {
       addEdge('CONVERSION_MOMENT', 'offer timed after a positive outcome · consent-aware');
       const pb=document.getElementById('popbar'); pb.textContent='💙 Keep-record + membership offer surfaced · consistent with her recorded consent';
@@ -1678,7 +1672,7 @@ function playTurn(){
   }
   const d = document.createElement('div');
   d.className = 'bub ' + t.sp + (t.sms ? ' sms' : '') + (t.proto ? ' proto' : '');
-  const ROLE = { adv: t.proto ? 'Safety screen · protocol engine' : 'Fabric AI Intake', 'fam-sp': 'Maya Torres · Patient' };
+  const ROLE = { adv: t.proto ? 'Safety screen · protocol engine' : 'AI Intake', 'fam-sp': 'Maya Torres · Patient' };
   d.innerHTML = '<span class="who">'+t.who+'</span><div class="bwrap"><div class="bwho">'+(ROLE[t.sp]||'')+'</div><div class="bt">'+t.text+(t.extra||'')+'</div>'
     + (t.note ? '<div class="proto-note">'+t.note+'</div>' : '')
     + '<div class="tn">'+(t.sms?'msg':'turn')+' '+(turnIdx+1)+'</div></div>';
@@ -1718,7 +1712,7 @@ function openPackage(){
     box.innerHTML += '<div class="ob-label">📦 Encounter package · what Dr. Okafor receives</div>'
       + '<div class="email-card">'
       + '<div class="eh"><div>To: <b>Async review queue · Dr. S. Okafor</b></div>'
-      + '<div>From: <b>Fabric AI Intake · session s_20412</b></div>'
+      + '<div>From: <b>AI Intake · session s_20412</b></div>'
       + '<div>Re: <b>Chronic cough · Torres, Maya (mt_5521) · readiness '+readiness().s+'%</b></div></div>'
       + '<div class="eb">'
       + '<p><b>HPI, in her words:</b> three weeks of cough, dry at first, now with chest tightness climbing stairs that eases at rest. States it \u201cfeels different from my asthma\u201d; albuterol untouched ≈2 years. Never smoked. Roommate with a persistent cough ≈1 month ago. Denies fever, night sweats, weight loss.</p>'
@@ -1734,7 +1728,7 @@ function openPackage(){
     box.innerHTML += '<div class="ob-label">📦 Encounter package · what the on-call clinician receives</div>'
       + '<div class="email-card">'
       + '<div class="eh"><div>To: <b>Async review queue · on-call</b></div>'
-      + '<div>From: <b>Fabric AI Intake · session s_31008 → chart nk_8102</b></div>'
+      + '<div>From: <b>AI Intake · session s_31008 → chart nk_8102</b></div>'
       + '<div>Re: <b>Uncomplicated UTI (protocol-matched) · Kim, Riley · readiness '+readiness().s+'%</b></div></div>'
       + '<div class="eb">'
       + '<p><b>HPI, in her words:</b> burning with urination and constant urgency since yesterday morning. Denies fever, chills, back or side pain, nausea, vomiting. Not pregnant; no UTI in years.</p>'
@@ -1757,7 +1751,7 @@ function openPackage(){
 function openMembership(){
   const box = document.getElementById('outboundBox');
   if (journey==='known'){
-    box.innerHTML += '<div class="ob-label">💙 Fabric Care · a plan assembled from her record — each line shows its source</div>'
+    box.innerHTML += '<div class="ob-label">💙 Care · a plan assembled from her record — each line shows its source</div>'
       + '<div class="email-card">'
       + '<div class="eh"><div>For: <b>Maya Torres</b></div><div>Assembled from: <b>chart mt_5521 · 9 resolved claims</b></div><div>Reviewed by: <b>care team · offer o_3104</b></div></div>'
       + '<div class="eb">'
@@ -1767,12 +1761,12 @@ function openMembership(){
       + '<p>· <b>A chart that stays right</b> — your allergy fix travels with you to every pharmacy and every visit. <span style="font-family:var(--font-mono); font-size:10.5px; color:var(--muted)">← allergy · confirmed</span></p>'
       + '<p>· <b>Follow-ups like the one you just got</b> — checks are triggered from your record automatically. <span style="font-family:var(--font-mono); font-size:10.5px; color:var(--muted)">← episode_outcome</span></p>'
       + '<p style="margin-top:10px"><b>$29/mo · cancel anytime</b> · your clinician team stays the same</p>'
-      + '<p><span class="portal-link" onclick="joinCare()">Maya joins Fabric Care →</span></p>'
+      + '<p><span class="portal-link" onclick="joinCare()">Maya joins Our Care →</span></p>'
       + '</div>'
       + '<div class="ef">Assembled from resolved claims only · offer logged as a conversion event · a decline is also recorded, so the offer is not repeated</div>'
       + '</div>';
   } else {
-    box.innerHTML += '<div class="ob-label">💾 Keep my record + Fabric Care · assembled from tonight\u2019s claims — each line shows its source</div>'
+    box.innerHTML += '<div class="ob-label">💾 Keep my record + Care · assembled from tonight\u2019s claims — each line shows its source</div>'
       + '<div class="email-card">'
       + '<div class="eh"><div>For: <b>Riley Kim</b></div><div>Assembled from: <b>chart nk_8102 · this visit\u2019s claims</b></div><div>Consent on file: <b>marketing declined · care messages allowed</b></div></div>'
       + '<div class="eb">'
@@ -1780,8 +1774,8 @@ function openMembership(){
       + '<p>· <b>Your sulfa allergy travels with you</b> — every future prescriber sees it, without you repeating it. <span style="font-family:var(--font-mono); font-size:10.5px; color:var(--muted)">← allergy</span></p>'
       + '<p>· <b>You never re-answer tonight\u2019s questions</b> — next visit starts where this one ended. <span style="font-family:var(--font-mono); font-size:10.5px; color:var(--muted)">← chart nk_8102</span></p>'
       + '<p>· <b>Follow-ups like the one you just got</b> — care messages only, per your recorded consent. <span style="font-family:var(--font-mono); font-size:10.5px; color:var(--muted)">← contact_consent · episode_outcome</span></p>'
-      + '<p><b>Fabric Care</b> adds same-night visits year-round and proactive refills and checks — <b>$29/mo · cancel anytime</b>.</p>'
-      + '<p><span class="portal-link" onclick="saveRecord()">Keep my record (free) →</span> &nbsp;·&nbsp; <span class="portal-link" onclick="joinCare()">Join Fabric Care →</span></p>'
+      + '<p><b>Our Care</b> adds same-night visits year-round and proactive refills and checks — <b>$29/mo · cancel anytime</b>.</p>'
+      + '<p><span class="portal-link" onclick="saveRecord()">Keep my record (free) →</span> &nbsp;·&nbsp; <span class="portal-link" onclick="joinCare()">Join Our Care →</span></p>'
       + '</div>'
       + '<div class="ef">Assembled from resolved claims only · both choices are recorded as claims · a decline is also recorded, so the offer is not repeated</div>'
       + '</div>';
@@ -1804,7 +1798,7 @@ function saveRecord(){
 function joinCare(){
   if (edges.some(e=>e.type==='MEMBER_ENROLLED')) return;
   addEdge('MEMBER_ENROLLED', 'transaction → relationship · attribution joined to acquisition channel');
-  document.getElementById('famTag').textContent='MEMBER · FABRIC CARE';
+  document.getElementById('famTag').textContent='MEMBER · CARE';
   const pb=document.getElementById('popbar'); pb.textContent='💙 '+(journey==='known'?'Maya':'Riley')+' enrolled · conversion event logged with channel attribution'; pb.classList.add('show');
   if (journey==='known'){
     document.getElementById('flywheel').innerHTML='<b style="color:var(--win)">The conversion:</b> a one-off urgent visit became a subscription because the record stayed useful after the visit — the follow-up was clinically triggered, the offer was assembled from her own data, and the full journey is attributed back to the channel that acquired her. More encounters improve both the clinical and engagement models, which improves outcomes and conversion, which produces more encounters. Tab ⑤ covers this in detail.';
@@ -1854,7 +1848,7 @@ function showView(v){
   document.getElementById('demoControls').style.visibility = v==='demo' ? 'visible' : 'hidden';
   document.getElementById('tbNote').textContent = v==='demo'
     ? 'one patient · one record · every claim inspectable (click anything)'
-    : ({record:'the schema that made the demo possible', stack:'where the hard technical bets go, 12–24 months', gateway:'governance enforced at the door · running in prod today', brain:'clinical intelligence × patient intent · acquisition → membership', plan:'people first · quick wins · budget · PlushCare mapping · growth-mapped consolidation'})[v];
+    : ({record:'the schema that made the demo possible', stack:'where the hard technical bets go, 12–24 months', gateway:'governance enforced at the door · running in prod today', brain:'clinical intelligence × patient intent · acquisition → membership', plan:'people first · quick wins · budget · NewCo mapping · growth-mapped consolidation'})[v];
 }
 
 /* ================= wiring ================= */
